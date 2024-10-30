@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/odin_comms/odin_comms.egg-info
+writing ../../build/odin_comms/odin_comms.egg-info/PKG-INFO
+writing dependency_links to ../../build/odin_comms/odin_comms.egg-info/dependency_links.txt
+writing entry points to ../../build/odin_comms/odin_comms.egg-info/entry_points.txt
+writing requirements to ../../build/odin_comms/odin_comms.egg-info/requires.txt
+writing top-level names to ../../build/odin_comms/odin_comms.egg-info/top_level.txt
+writing manifest file '../../build/odin_comms/odin_comms.egg-info/SOURCES.txt'
+reading manifest file '../../build/odin_comms/odin_comms.egg-info/SOURCES.txt'
+writing manifest file '../../build/odin_comms/odin_comms.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jose/microros_ws/build/odin_comms/build
+creating /home/jose/microros_ws/build/odin_comms/build/lib
+creating /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms
+copying odin_comms/__init__.py -> /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms
+running install
+running install_lib
+creating /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/__init__.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/jose/microros_ws/install/odin_comms/share/ament_index
+creating /home/jose/microros_ws/install/odin_comms/share/ament_index/resource_index
+creating /home/jose/microros_ws/install/odin_comms/share/ament_index/resource_index/packages
+copying resource/odin_comms -> /home/jose/microros_ws/install/odin_comms/share/ament_index/resource_index/packages
+copying package.xml -> /home/jose/microros_ws/install/odin_comms/share/odin_comms
+running install_egg_info
+Copying ../../build/odin_comms/odin_comms.egg-info to /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/jose/microros_ws/build/odin_comms/install.log'

@@ -1,0 +1,22 @@
+[1.416s] Invoking command in '/home/jose/microros_ws/build/odin_comms': PYTHONPATH=/home/jose/microros_ws/build/odin_comms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jose/microros_ws/build/odin_comms/build --no-deps symlink_data --force
+[1.926s] running develop
+[1.927s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.927s]   warnings.warn(
+[2.318s] running egg_info
+[2.318s] writing odin_comms.egg-info/PKG-INFO
+[2.319s] writing dependency_links to odin_comms.egg-info/dependency_links.txt
+[2.320s] writing entry points to odin_comms.egg-info/entry_points.txt
+[2.320s] writing requirements to odin_comms.egg-info/requires.txt
+[2.322s] writing top-level names to odin_comms.egg-info/top_level.txt
+[2.322s] reading manifest file 'odin_comms.egg-info/SOURCES.txt'
+[2.324s] writing manifest file 'odin_comms.egg-info/SOURCES.txt'
+[2.327s] running build_ext
+[2.328s] Creating /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin-comms.egg-link (link to .)
+[2.330s] Installing control_ml script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+[2.330s] Installing control_mr script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+[2.331s] Installing data_subscriber script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+[2.334s] 
+[2.335s] Installed /home/jose/microros_ws/build/odin_comms
+[2.335s] running symlink_data
+[2.338s] symbolically linking /home/jose/microros_ws/build/odin_comms/resource/odin_comms -> /home/jose/microros_ws/install/odin_comms/share/ament_index/resource_index/packages
+[2.338s] symbolically linking /home/jose/microros_ws/build/odin_comms/package.xml -> /home/jose/microros_ws/install/odin_comms/share/odin_comms

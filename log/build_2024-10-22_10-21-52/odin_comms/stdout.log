@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing odin_comms.egg-info/PKG-INFO
+writing dependency_links to odin_comms.egg-info/dependency_links.txt
+writing entry points to odin_comms.egg-info/entry_points.txt
+writing requirements to odin_comms.egg-info/requires.txt
+writing top-level names to odin_comms.egg-info/top_level.txt
+reading manifest file 'odin_comms.egg-info/SOURCES.txt'
+writing manifest file 'odin_comms.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin-comms.egg-link (link to .)
+Installing control_ml script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+Installing control_mr script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+Installing data_subscriber script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+
+Installed /home/jose/microros_ws/build/odin_comms
+running symlink_data
+symbolically linking /home/jose/microros_ws/build/odin_comms/resource/odin_comms -> /home/jose/microros_ws/install/odin_comms/share/ament_index/resource_index/packages
+symbolically linking /home/jose/microros_ws/build/odin_comms/package.xml -> /home/jose/microros_ws/install/odin_comms/share/odin_comms

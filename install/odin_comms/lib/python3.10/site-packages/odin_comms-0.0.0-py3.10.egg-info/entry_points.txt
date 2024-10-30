@@ -1,0 +1,7 @@
+[console_scripts]
+control_PID = odin_comms.control_PID:main
+control_ml = odin_comms.control_motor2:main
+control_mr = odin_comms.control_motor1:main
+control_twist = odin_comms.control_twist:main
+data_subscriber = odin_comms.data_subscriber:main
+

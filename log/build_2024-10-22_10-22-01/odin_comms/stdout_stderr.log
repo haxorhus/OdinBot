@@ -1,0 +1,37 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+Removing /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin-comms.egg-link (link to .)
+running egg_info
+writing ../../build/odin_comms/odin_comms.egg-info/PKG-INFO
+writing dependency_links to ../../build/odin_comms/odin_comms.egg-info/dependency_links.txt
+writing entry points to ../../build/odin_comms/odin_comms.egg-info/entry_points.txt
+writing requirements to ../../build/odin_comms/odin_comms.egg-info/requires.txt
+writing top-level names to ../../build/odin_comms/odin_comms.egg-info/top_level.txt
+reading manifest file '../../build/odin_comms/odin_comms.egg-info/SOURCES.txt'
+writing manifest file '../../build/odin_comms/odin_comms.egg-info/SOURCES.txt'
+running build
+running build_py
+copying odin_comms/control_motor1.py -> /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms
+copying odin_comms/control_motor2.py -> /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms
+running install
+running install_lib
+creating /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/data_subscriber.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/control_motor1.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/control_motor2.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/__init__.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/data_subscriber.py to data_subscriber.cpython-310.pyc
+byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/control_motor1.py to control_motor1.cpython-310.pyc
+byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/control_motor2.py to control_motor2.cpython-310.pyc
+byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/odin_comms -> /home/jose/microros_ws/install/odin_comms/share/ament_index/resource_index/packages
+copying package.xml -> /home/jose/microros_ws/install/odin_comms/share/odin_comms
+running install_egg_info
+Copying ../../build/odin_comms/odin_comms.egg-info to /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms-0.0.0-py3.10.egg-info
+running install_scripts
+Installing control_ml script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+Installing control_mr script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+Installing data_subscriber script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+writing list of installed files to '/home/jose/microros_ws/build/odin_comms/install.log'

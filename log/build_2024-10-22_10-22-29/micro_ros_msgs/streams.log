@@ -1,0 +1,13 @@
+[0.024s] Invoking command in '/home/jose/microros_ws/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/microros_ws/install/odin_comms:/opt/ros/humble /usr/bin/cmake --build /home/jose/microros_ws/build/micro_ros_msgs -- -j4 -l4
+[0.118s] [ 10%] Built target micro_ros_msgs__rosidl_generator_c
+[0.125s] failed to create symbolic link '/home/jose/microros_ws/build/micro_ros_msgs/ament_cmake_python/micro_ros_msgs/micro_ros_msgs' because existing path cannot be removed: Is a directory
+[0.126s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_micro_ros_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_micro_ros_msgs] Error 1
+[0.126s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_micro_ros_msgs.dir/all] Error 2
+[0.126s] gmake[1]: *** Waiting for unfinished jobs....
+[0.128s] [ 12%] Built target micro_ros_msgs__cpp
+[0.143s] [35m[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_fastrtps_c[0m
+[0.148s] [35m[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_introspection_c[0m
+[0.169s] [ 23%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c
+[0.169s] [ 34%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c
+[0.170s] gmake: *** [Makefile:146: all] Error 2
+[0.498s] Invoked command in '/home/jose/microros_ws/build/micro_ros_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/microros_ws/install/odin_comms:/opt/ros/humble /usr/bin/cmake --build /home/jose/microros_ws/build/micro_ros_msgs -- -j4 -l4

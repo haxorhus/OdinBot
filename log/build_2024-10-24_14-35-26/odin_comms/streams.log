@@ -1,0 +1,27 @@
+[1.536s] Invoking command in '/home/jose/microros_ws/src/odin_comms': PYTHONPATH=/home/jose/microros_ws/build/odin_comms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odin_comms build --build-base /home/jose/microros_ws/build/odin_comms/build install --record /home/jose/microros_ws/build/odin_comms/install.log --single-version-externally-managed install_data
+[2.065s] running egg_info
+[2.067s] writing ../../build/odin_comms/odin_comms.egg-info/PKG-INFO
+[2.067s] writing dependency_links to ../../build/odin_comms/odin_comms.egg-info/dependency_links.txt
+[2.067s] writing entry points to ../../build/odin_comms/odin_comms.egg-info/entry_points.txt
+[2.067s] writing requirements to ../../build/odin_comms/odin_comms.egg-info/requires.txt
+[2.068s] writing top-level names to ../../build/odin_comms/odin_comms.egg-info/top_level.txt
+[2.071s] reading manifest file '../../build/odin_comms/odin_comms.egg-info/SOURCES.txt'
+[2.074s] writing manifest file '../../build/odin_comms/odin_comms.egg-info/SOURCES.txt'
+[2.074s] running build
+[2.074s] running build_py
+[2.075s] copying odin_comms/control_motor1.py -> /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms
+[2.075s] running install
+[2.075s] running install_lib
+[2.076s] copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/control_motor1.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+[2.079s] byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/control_motor1.py to control_motor1.cpython-310.pyc
+[2.080s] running install_data
+[2.080s] copying package.xml -> /home/jose/microros_ws/install/odin_comms/share/odin_comms
+[2.080s] running install_egg_info
+[2.084s] removing '/home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms-0.0.0-py3.10.egg-info' (and everything under it)
+[2.084s] Copying ../../build/odin_comms/odin_comms.egg-info to /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms-0.0.0-py3.10.egg-info
+[2.090s] running install_scripts
+[2.135s] Installing control_ml script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+[2.135s] Installing control_mr script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+[2.136s] Installing data_subscriber script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+[2.139s] writing list of installed files to '/home/jose/microros_ws/build/odin_comms/install.log'
+[2.193s] Invoked command in '/home/jose/microros_ws/src/odin_comms' returned '0': PYTHONPATH=/home/jose/microros_ws/build/odin_comms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odin_comms build --build-base /home/jose/microros_ws/build/odin_comms/build install --record /home/jose/microros_ws/build/odin_comms/install.log --single-version-externally-managed install_data

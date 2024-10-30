@@ -1,0 +1,40 @@
+[1.135s] Invoking command in '/home/jose/microros_ws/build/odin_comms': PYTHONPATH=/home/jose/microros_ws/build/odin_comms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/jose/microros_ws/build/odin_comms/build
+[1.535s] running develop
+[1.537s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.537s]   warnings.warn(
+[1.772s] Removing /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin-comms.egg-link (link to .)
+[1.889s] Invoked command in '/home/jose/microros_ws/build/odin_comms' returned '0': PYTHONPATH=/home/jose/microros_ws/build/odin_comms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/jose/microros_ws/build/odin_comms/build
+[1.891s] Invoking command in '/home/jose/microros_ws/src/odin_comms': PYTHONPATH=/home/jose/microros_ws/build/odin_comms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odin_comms build --build-base /home/jose/microros_ws/build/odin_comms/build install --record /home/jose/microros_ws/build/odin_comms/install.log --single-version-externally-managed install_data --force
+[2.249s] running egg_info
+[2.250s] writing ../../build/odin_comms/odin_comms.egg-info/PKG-INFO
+[2.251s] writing dependency_links to ../../build/odin_comms/odin_comms.egg-info/dependency_links.txt
+[2.251s] writing entry points to ../../build/odin_comms/odin_comms.egg-info/entry_points.txt
+[2.251s] writing requirements to ../../build/odin_comms/odin_comms.egg-info/requires.txt
+[2.251s] writing top-level names to ../../build/odin_comms/odin_comms.egg-info/top_level.txt
+[2.254s] reading manifest file '../../build/odin_comms/odin_comms.egg-info/SOURCES.txt'
+[2.255s] writing manifest file '../../build/odin_comms/odin_comms.egg-info/SOURCES.txt'
+[2.255s] running build
+[2.255s] running build_py
+[2.256s] copying odin_comms/control_motor1.py -> /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms
+[2.256s] copying odin_comms/control_motor2.py -> /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms
+[2.256s] running install
+[2.257s] running install_lib
+[2.258s] creating /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+[2.258s] copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/data_subscriber.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+[2.258s] copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/control_motor1.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+[2.259s] copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/control_motor2.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+[2.259s] copying /home/jose/microros_ws/build/odin_comms/build/lib/odin_comms/__init__.py -> /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms
+[2.260s] byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/data_subscriber.py to data_subscriber.cpython-310.pyc
+[2.261s] byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/control_motor1.py to control_motor1.cpython-310.pyc
+[2.261s] byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/control_motor2.py to control_motor2.cpython-310.pyc
+[2.262s] byte-compiling /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms/__init__.py to __init__.cpython-310.pyc
+[2.262s] running install_data
+[2.263s] copying resource/odin_comms -> /home/jose/microros_ws/install/odin_comms/share/ament_index/resource_index/packages
+[2.263s] copying package.xml -> /home/jose/microros_ws/install/odin_comms/share/odin_comms
+[2.263s] running install_egg_info
+[2.266s] Copying ../../build/odin_comms/odin_comms.egg-info to /home/jose/microros_ws/install/odin_comms/lib/python3.10/site-packages/odin_comms-0.0.0-py3.10.egg-info
+[2.267s] running install_scripts
+[2.294s] Installing control_ml script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+[2.294s] Installing control_mr script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+[2.294s] Installing data_subscriber script to /home/jose/microros_ws/install/odin_comms/lib/odin_comms
+[2.295s] writing list of installed files to '/home/jose/microros_ws/build/odin_comms/install.log'
