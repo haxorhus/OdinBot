@@ -32,12 +32,12 @@ class TwistToMotorControlNode(Node):
 
         # Convertir RPM a PWM
         # rpm*pwmMAX   + pwmMAX
-        pwm_right = int((rpm_right / 170) * 255)
-        pwm_left = int((rpm_left / 130) * 255)
+        #pwm_right = int((rpm_right / 170) * 255)
+        #pwm_left = int((rpm_left / 130) * 255)
 
         # Publicar los valores de PWM en los tópicos respectivos
-        self.publish_pwm(pwm_right, 'r')
-        self.publish_pwm(pwm_left, 'l')
+        self.publish(rpm_right, 'r')
+        self.publish(rpm_left, 'l')
 
     def linear_angular_to_rpm(self, linear_velocity, angular_velocity, motor):
         """Convierte velocidad lineal y angular a RPM para cada motor."""
@@ -50,12 +50,8 @@ class TwistToMotorControlNode(Node):
         rpm = (wheel_velocity * 60) / (2 * 3.14159 * 0.1)  # Suponiendo un radio de rueda de 0.1 m
         return max(min(rpm, self.max_rpm), -self.max_rpm)  # Limitar a -max_rpm y max_rpm
 
-    def rpm_to_pwm(self, rpm):
-        """Convierte el valor de RPM a PWM (-255 a 255)."""
-        pwm = (rpm / self.max_rpm) * self.max_pwm
-        return int(max(min(pwm, self.max_pwm), -self.max_pwm))  # Limitar a -255 y 255
 
-    def publish_pwm(self, pwm_value, motor_side):
+    def publish(self, pwm_value, motor_side):
         """Publica el valor de PWM en el tópico correspondiente."""
         msg = Int32()
         msg.data = pwm_value

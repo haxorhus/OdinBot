@@ -23,7 +23,7 @@ class ImageProcessorNode(Node):
         self.bridge = CvBridge()
 
         # Path to input image and output map files
-        self.image_path = '/home/jose/Downloads/cropped_image.png'
+        self.image_path = '/home/jose/microros_ws/src/img/cropped_image.png'
         self.map_dir = '/home/jose/microros_ws/src/maps'
 
         # Variables de configuración
@@ -43,30 +43,49 @@ class ImageProcessorNode(Node):
             self.get_logger().error(f"Error al cargar la imagen desde {self.image_path}")
             return
 
-        # Convertir la imagen a escala de grises
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        # Aplicar detección de bordes
-        edges = cv2.Canny(gray, 50, 150)
-        # Encontrar contornos
-        contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-        # Filtrar contornos para encontrar el cuadrado más grande
-        largest_contour = max(contours, key=cv2.contourArea)
-
-        # Obtener el rectángulo delimitador del cuadrado
-        x, y, w, h = cv2.boundingRect(largest_contour)
-
-        # Ajusta w y h para que representen un cuadrado de 2.7x2.7 metros en píxeles
-        desired_size_in_pixels = int(self.map_size_meters / self.map_resolution)
-        cropped_image = cv2.resize(image[y:y+h, x:x+w], (desired_size_in_pixels, desired_size_in_pixels))
 
         # Convertir la imagen recortada a HSV para la detección de colores
-        hsv = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2HSV)
+        hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
         # Calcular y publicar posiciones del objetivo y del robot
-        goal_pose, robot_pose, marked_image = self.calculate_positions(cropped_image, w, h)
-
+        h,w = image.shape[:2]
+        robot_pose, marked_image = self.calculate_positions(image, w, h)
+        
+        ## La orunera vez que se abre se define el objetivo y la posicion inicial
         if self.initial_robot_position is None:
+
+            # --- DETECCIÓN DEL OBJETO VERDE ---
+            lower_green = np.array([40, 40, 40])
+            upper_green = np.array([80, 255, 255])
+            mask_green = cv2.inRange(hsv, lower_green, upper_green)
+            contours_green, _ = cv2.findContours(mask_green, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+            if contours_green:
+                max_contour_green = max(contours_green, key=cv2.contourArea)
+                M_green = cv2.moments(max_contour_green)
+                if M_green['m00'] != 0:
+                    cx_goal = int(M_green['m10'] / M_green['m00'])
+                    cy_goal = int(M_green['m01'] / M_green['m00'])
+                    cv2.drawContours(marked_image, [max_contour_green], -1, (0, 0, 255), 2)  # Contorno rojo
+                else:
+                    cx_goal, cy_goal = 0, 0
+            else:
+                cx_goal, cy_goal = 0, 0
+            
+            # Conversion de píxeles a metros basado en la resolución
+            scale_factor_x = self.map_size_meters / w
+            scale_factor_y = self.map_size_meters / h
+            
+            # Crear `PoseStamped` para el objetivo
+            goal_pose = PoseStamped()
+            goal_pose.header.frame_id = 'map'
+            goal_pose.header.stamp = self.get_clock().now().to_msg()
+            goal_pose.pose.position.x = cx_goal * scale_factor_x
+            goal_pose.pose.position.y = cy_goal * scale_factor_y
+            goal_pose.pose.orientation.w = 1.0
+
+            #publicar la posicion del objetivo
+            self.goal_pub.publish(goal_pose)
 
             # Definir la posición inicial del robot
             self.initial_robot_position = (robot_pose.pose.position.x, robot_pose.pose.position.y)
@@ -82,10 +101,6 @@ class ImageProcessorNode(Node):
         mask_red = mask_red1 + mask_red2
 
         binary_red = cv2.bitwise_not(mask_red)  # Invertir para fondo blanco
-        #binary_red = cv2.flip(binary_red, 1)  
-        #binary_red = cv2.rotate(binary_red, cv2.ROTATE_90_CLOCKWISE)
-
-        binary_red = cv2.resize(binary_red, (desired_size_in_pixels, desired_size_in_pixels))
         
         pgm_filename = os.path.join(self.map_dir, 'map.pgm')
         cv2.imwrite(pgm_filename, binary_red)
@@ -101,7 +116,6 @@ class ImageProcessorNode(Node):
             yaml_file.write("free_thresh: 0.196\n")
 
         # Publicar las posiciones
-        self.goal_pub.publish(goal_pose)
         self.robot_position_pub.publish(robot_pose)
 
         # Mostrar la imagen con los contornos resaltados
@@ -111,24 +125,6 @@ class ImageProcessorNode(Node):
     def calculate_positions(self, cropped_image, width_px, height_px):
         hsv = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2HSV)
         marked_image = cropped_image.copy()
-
-        # --- DETECCIÓN DEL OBJETO VERDE ---
-        lower_green = np.array([40, 40, 40])
-        upper_green = np.array([80, 255, 255])
-        mask_green = cv2.inRange(hsv, lower_green, upper_green)
-        contours_green, _ = cv2.findContours(mask_green, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-        if contours_green:
-            max_contour_green = max(contours_green, key=cv2.contourArea)
-            M_green = cv2.moments(max_contour_green)
-            if M_green['m00'] != 0:
-                cx_goal = int(M_green['m10'] / M_green['m00'])
-                cy_goal = int(M_green['m01'] / M_green['m00'])
-                cv2.drawContours(marked_image, [max_contour_green], -1, (0, 0, 255), 2)  # Contorno rojo
-            else:
-                cx_goal, cy_goal = 0, 0
-        else:
-            cx_goal, cy_goal = 0, 0
 
         # --- DETECCIÓN DEL CÍRCULO (ROBOT) ---
         gray_cropped = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2GRAY)
@@ -155,14 +151,6 @@ class ImageProcessorNode(Node):
         scale_factor_x = self.map_size_meters / width_px
         scale_factor_y = self.map_size_meters / height_px
 
-        # Crear `PoseStamped` para el objetivo
-        goal_pose = PoseStamped()
-        goal_pose.header.frame_id = 'map'
-        goal_pose.header.stamp = self.get_clock().now().to_msg()
-        goal_pose.pose.position.x = cx_goal * scale_factor_x
-        goal_pose.pose.position.y = cy_goal * scale_factor_y
-        goal_pose.pose.orientation.w = 1.0
-
         # Crear `PoseStamped` para la posición del robot
         robot_pose = PoseStamped()
         robot_pose.header.frame_id = 'odom'
@@ -171,7 +159,8 @@ class ImageProcessorNode(Node):
         robot_pose.pose.position.y = cy_robot * scale_factor_y
         robot_pose.pose.orientation.w = 1.0
 
-        return goal_pose, robot_pose, marked_image
+        return robot_pose, marked_image
+
 
 def main(args=None):
     rclpy.init(args=args)

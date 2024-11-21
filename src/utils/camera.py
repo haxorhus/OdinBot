@@ -2,10 +2,16 @@ import cv2
 import numpy as np
 
 # Dirección de la cámara IP (reemplaza esto con tu URL de cámara IP)
-video_url = "http://192.168.240.229:8080/video"
+video_url = "http://192.168.0.4:8080/video"
 
 # Inicializar el stream de video
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(video_url)
+
+# Variables de configuración
+map_resolution = 0.005  # Resolución en metros/píxel
+map_size_meters = 2.7   # Tamaño del mapa en metros
+
+
 if not cap.isOpened():
     print("No se pudo abrir la cámara IP.")
     exit()
@@ -27,58 +33,27 @@ while True:
     contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     # Dibujar todos los contornos detectados
-    cv2.drawContours(frame, contours, -1, (255, 0, 0), 2)  # Contornos en azul
+    cv2.drawContours(frame, contours, -1, (255, 0, 0), 2)  # Contornos en azu
 
-    # Convertir la imagen al espacio HSV para detección de colores
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    # Convertir la imagen a escala de grises
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    # Aplicar detección de bordes
+    edges = cv2.Canny(gray, 50, 150)
+    # Encontrar contornos
+    contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    # --- DETECCIÓN DE OBJETOS ROJOS ---
-    lower_red1 = np.array([0, 120, 70])
-    upper_red1 = np.array([10, 255, 255])
-    mask_red1 = cv2.inRange(hsv, lower_red1, upper_red1)
+    # Filtrar contornos para encontrar el cuadrado más grande
+    largest_contour = max(contours, key=cv2.contourArea)
 
-    lower_red2 = np.array([170, 120, 70])
-    upper_red2 = np.array([180, 255, 255])
-    mask_red2 = cv2.inRange(hsv, lower_red2, upper_red2)
+    # Obtener el rectángulo delimitador del cuadrado
+    x, y, w, h = cv2.boundingRect(largest_contour)
 
-    mask_red = mask_red1 + mask_red2
-
-    # Encontrar contornos de objetos rojos
-    contours_red, _ = cv2.findContours(mask_red, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    cv2.drawContours(frame, contours_red, -1, (255, 0, 0), 2)  # Contornos en rojo
-
-    # --- DETECCIÓN DE OBJETOS VERDES ---
-    lower_green = np.array([40, 40, 40])
-    upper_green = np.array([80, 255, 255])
-    mask_green = cv2.inRange(hsv, lower_green, upper_green)
-
-    contours_green, _ = cv2.findContours(mask_green, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    cv2.drawContours(frame, contours_green, -1, (0, 0, 255), 2)  # Contornos en verde
-
-    # --- DETECCIÓN DEL CÍRCULO (ROBOT) ---
-    gray_blurred = cv2.medianBlur(gray, 5)
-    circles = cv2.HoughCircles(
-        gray_blurred,
-        cv2.HOUGH_GRADIENT,
-        dp=1.2,
-        minDist=30,
-        param1=150,
-        param2=40,
-        minRadius=10,
-        maxRadius=30
-    )
-
-    
-    if circles is not None:
-        circles = np.uint16(np.around(circles))
-        for circle in circles[0, :]:
-            cx, cy, radius = circle
-            cv2.circle(frame, (cx, cy), radius, (255, 255, 0), 2)  # Contorno del círculo en cian
-            cv2.circle(frame, (cx, cy), 2, (0, 255, 255), 3)  # Centro del círculo en amarillo
-    
+    # Ajusta w y h para que representen un cuadrado de 2.7x2.7 metros en píxeles
+    desired_size_in_pixels = int(map_size_meters / map_resolution)
+    cropped_image = cv2.resize(frame[y:y+h, x:x+w], (desired_size_in_pixels, desired_size_in_pixels))
 
     # Mostrar el video con los contornos
-    cv2.imshow('Video con Contornos', frame)
+    cv2.imshow('Video cortado', cropped_image)
 
     # Presionar 'q' para salir del bucle
     if cv2.waitKey(1) & 0xFF == ord('q'):
