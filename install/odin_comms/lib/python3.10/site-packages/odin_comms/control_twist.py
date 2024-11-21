@@ -15,9 +15,9 @@ class TwistToMotorControlNode(Node):
         self.subscription_cmd_vel = self.create_subscription(Twist, '/cmd_vel', self.cmd_vel_callback, 10)
 
         # Parámetros del motor
-        self.max_rpm = 120  # Cambia este valor si el RPM máximo del motor cambia
+        self.max_rpm = 130  # Cambia este valor si el RPM máximo del motor cambia
         self.max_pwm = 255  # Rango de PWM (-255 a 255)
-        self.wheel_base = 0.5  # Distancia entre las ruedas en metros (ajusta según tu robot)
+        self.wheel_base = 0.2  # Distancia entre las ruedas en metros (ajusta según tu robot)
 
         self.get_logger().info('Nodo Twist a control de motores iniciado')
     
@@ -31,8 +31,9 @@ class TwistToMotorControlNode(Node):
         rpm_left = self.linear_angular_to_rpm(linear_velocity, angular_velocity, motor='left')
 
         # Convertir RPM a PWM
-        pwm_right = self.rpm_to_pwm(rpm_right)
-        pwm_left = self.rpm_to_pwm(rpm_left)
+        # rpm*pwmMAX   + pwmMAX
+        pwm_right = int((rpm_right / 170) * 255)
+        pwm_left = int((rpm_left / 130) * 255)
 
         # Publicar los valores de PWM en los tópicos respectivos
         self.publish_pwm(pwm_right, 'r')
@@ -60,10 +61,10 @@ class TwistToMotorControlNode(Node):
         msg.data = pwm_value
         if motor_side == 'r':
             self.publisher_motor_r.publish(msg)
-            self.get_logger().info(f'Publicando PWM Motor Derecho: {pwm_value} en el topic /cmd_vel_r')
+            #self.get_logger().info(f'Publicando PWM Motor Derecho: {pwm_value} en el topic /cmd_vel_r')
         elif motor_side == 'l':
             self.publisher_motor_l.publish(msg)
-            self.get_logger().info(f'Publicando PWM Motor Izquierdo: {pwm_value} en el topic /cmd_vel_l')
+            #self.get_logger().info(f'Publicando PWM Motor Izquierdo: {pwm_value} en el topic /cmd_vel_l')
 
 def main(args=None):
     rclpy.init(args=args)

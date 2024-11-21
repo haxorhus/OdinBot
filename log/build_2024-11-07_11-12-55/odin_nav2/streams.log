@@ -1,0 +1,35 @@
+[0.872s] Invoking command in '/home/jose/microros_ws/src/odin_nav2': PYTHONPATH=/home/jose/microros_ws/build/odin_nav2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/odin_nav2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odin_nav2 build --build-base /home/jose/microros_ws/build/odin_nav2/build install --record /home/jose/microros_ws/build/odin_nav2/install.log --single-version-externally-managed install_data
+[1.075s] running egg_info
+[1.076s] writing ../../build/odin_nav2/odin_nav2.egg-info/PKG-INFO
+[1.076s] writing dependency_links to ../../build/odin_nav2/odin_nav2.egg-info/dependency_links.txt
+[1.076s] writing entry points to ../../build/odin_nav2/odin_nav2.egg-info/entry_points.txt
+[1.076s] writing requirements to ../../build/odin_nav2/odin_nav2.egg-info/requires.txt
+[1.076s] writing top-level names to ../../build/odin_nav2/odin_nav2.egg-info/top_level.txt
+[1.078s] reading manifest file '../../build/odin_nav2/odin_nav2.egg-info/SOURCES.txt'
+[1.079s] writing manifest file '../../build/odin_nav2/odin_nav2.egg-info/SOURCES.txt'
+[1.079s] running build
+[1.079s] running build_py
+[1.079s] running install
+[1.079s] running install_lib
+[1.081s] running install_data
+[1.081s] copying package.xml -> /home/jose/microros_ws/install/odin_nav2/share/odin_nav2
+[1.081s] creating /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/launch
+[1.081s] creating /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/rviz
+[1.081s] copying rviz/robot.rviz -> /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/rviz
+[1.081s] copying rviz/robot_old.rviz -> /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/rviz
+[1.081s] copying rviz/robot_new.rviz -> /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/rviz
+[1.081s] creating /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/config
+[1.081s] copying config/nav2_params.yaml -> /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/config
+[1.081s] copying config/ekf.yaml -> /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/config
+[1.081s] creating /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/description
+[1.081s] creating /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/scripts
+[1.082s] copying scripts/waypoint_follower.py -> /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/scripts
+[1.082s] copying scripts/robot_navigator.py -> /home/jose/microros_ws/install/odin_nav2/share/odin_nav2/scripts
+[1.082s] running install_egg_info
+[1.084s] removing '/home/jose/microros_ws/install/odin_nav2/lib/python3.10/site-packages/odin_nav2-0.0.0-py3.10.egg-info' (and everything under it)
+[1.085s] Copying ../../build/odin_nav2/odin_nav2.egg-info to /home/jose/microros_ws/install/odin_nav2/lib/python3.10/site-packages/odin_nav2-0.0.0-py3.10.egg-info
+[1.086s] running install_scripts
+[1.103s] Installing robot_navigator script to /home/jose/microros_ws/install/odin_nav2/lib/odin_nav2
+[1.103s] Installing waypoint_follower script to /home/jose/microros_ws/install/odin_nav2/lib/odin_nav2
+[1.103s] writing list of installed files to '/home/jose/microros_ws/build/odin_nav2/install.log'
+[1.132s] Invoked command in '/home/jose/microros_ws/src/odin_nav2' returned '0': PYTHONPATH=/home/jose/microros_ws/build/odin_nav2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/odin_nav2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odin_nav2 build --build-base /home/jose/microros_ws/build/odin_nav2/build install --record /home/jose/microros_ws/build/odin_nav2/install.log --single-version-externally-managed install_data

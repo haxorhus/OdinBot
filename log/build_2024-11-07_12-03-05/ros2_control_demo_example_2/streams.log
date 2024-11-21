@@ -1,0 +1,25 @@
+[0.502s] Invoking command in '/home/jose/microros_ws/build/ros2_control_demo_example_2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/odin_comms:/opt/ros/humble /usr/bin/cmake /home/jose/microros_ws/src/example_2 -DCMAKE_INSTALL_PREFIX=/home/jose/microros_ws/install/ros2_control_demo_example_2
+[0.591s] -- The CXX compiler identification is GNU 11.4.0
+[0.591s] -- Detecting CXX compiler ABI info
+[0.644s] -- Detecting CXX compiler ABI info - done
+[0.653s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.653s] -- Detecting CXX compile features
+[0.654s] -- Detecting CXX compile features - done
+[0.673s] [33mCMake Warning at CMakeLists.txt:20 (find_package):
+[0.674s]   Could not find a configuration file for package "controller_manager" that
+[0.674s]   is compatible with requested version "4.0.0".
+[0.674s] 
+[0.674s]   The following configuration files were considered but not accepted:
+[0.674s] 
+[0.675s]     /opt/ros/humble/share/controller_manager/cmake/controller_managerConfig.cmake, version: 2.43.1
+[0.675s] 
+[0.675s] 
+[0.675s] [0m
+[0.675s] [31mCMake Error at CMakeLists.txt:23 (message):
+[0.675s]   ros2_control version 4.0.0 or higher is required.  Are you using the
+[0.675s]   correct branch of the ros2_control_demos repository?
+[0.675s] 
+[0.676s] [0m
+[0.676s] -- Configuring incomplete, errors occurred!
+[0.676s] See also "/home/jose/microros_ws/build/ros2_control_demo_example_2/CMakeFiles/CMakeOutput.log".
+[0.678s] Invoked command in '/home/jose/microros_ws/build/ros2_control_demo_example_2' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/odin_comms:/opt/ros/humble /usr/bin/cmake /home/jose/microros_ws/src/example_2 -DCMAKE_INSTALL_PREFIX=/home/jose/microros_ws/install/ros2_control_demo_example_2

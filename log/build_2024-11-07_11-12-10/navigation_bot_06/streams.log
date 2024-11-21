@@ -1,0 +1,11 @@
+[1.013s] Invoking command in '/home/jose/microros_ws/src/odin_nav2': PYTHONPATH=/home/jose/microros_ws/build/navigation_bot_06/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/navigation_bot_06/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/navigation_bot_06 build --build-base /home/jose/microros_ws/build/navigation_bot_06/build install --record /home/jose/microros_ws/build/navigation_bot_06/install.log --single-version-externally-managed install_data
+[1.243s] running egg_info
+[1.243s] creating ../../build/navigation_bot_06/navigation_bot_06.egg-info
+[1.243s] writing ../../build/navigation_bot_06/navigation_bot_06.egg-info/PKG-INFO
+[1.243s] writing dependency_links to ../../build/navigation_bot_06/navigation_bot_06.egg-info/dependency_links.txt
+[1.243s] writing entry points to ../../build/navigation_bot_06/navigation_bot_06.egg-info/entry_points.txt
+[1.244s] writing requirements to ../../build/navigation_bot_06/navigation_bot_06.egg-info/requires.txt
+[1.244s] writing top-level names to ../../build/navigation_bot_06/navigation_bot_06.egg-info/top_level.txt
+[1.244s] writing manifest file '../../build/navigation_bot_06/navigation_bot_06.egg-info/SOURCES.txt'
+[1.244s] error: package directory 'navigation_bot_06' does not exist
+[1.261s] Invoked command in '/home/jose/microros_ws/src/odin_nav2' returned '1': PYTHONPATH=/home/jose/microros_ws/build/navigation_bot_06/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/navigation_bot_06/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/navigation_bot_06 build --build-base /home/jose/microros_ws/build/navigation_bot_06/build install --record /home/jose/microros_ws/build/navigation_bot_06/install.log --single-version-externally-managed install_data

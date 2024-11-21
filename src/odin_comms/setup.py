@@ -14,8 +14,8 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='jose',
-    maintainer_email='jose@todo.todo',
-    description='TODO: Package description',
+    maintainer_email='joseferreira@fiuna.edu.py',
+    description='En este paquete se encuentran todos los nodos que comunican la PC con ROS con el robot fisico',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={

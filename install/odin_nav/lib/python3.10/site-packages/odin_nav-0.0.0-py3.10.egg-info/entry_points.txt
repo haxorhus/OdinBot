@@ -1,0 +1,6 @@
+[console_scripts]
+goal_pub = odin_nav.goal_pub:main
+map_gen = odin_nav.convert_to_map:main
+map_pub = odin_nav.map_pub:main
+odom_node = odin_nav.odom_node:main
+

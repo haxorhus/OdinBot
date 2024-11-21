@@ -1,0 +1,24 @@
+[0.034s] Invoking command in '/home/jose/microros_ws/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/microros_ws/install/odin_nav2:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/odin_comms:/opt/ros/humble /usr/bin/cmake --build /home/jose/microros_ws/build/micro_ros_msgs -- -j16 -l16
+[0.523s] [  2%] Built target micro_ros_msgs__cpp
+[0.523s] [ 12%] Built target micro_ros_msgs__rosidl_generator_c
+[0.523s] [ 12%] Built target ament_cmake_python_symlink_micro_ros_msgs
+[0.524s] [ 44%] Built target micro_ros_msgs__rosidl_typesupport_introspection_cpp
+[0.524s] [ 44%] Built target micro_ros_msgs__rosidl_typesupport_cpp
+[0.524s] [ 44%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_cpp
+[0.524s] [ 76%] Built target micro_ros_msgs__rosidl_typesupport_c
+[0.524s] [ 76%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c
+[0.524s] [ 76%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c
+[0.524s] [ 76%] Built target micro_ros_msgs
+[0.524s] [ 78%] Built target micro_ros_msgs__py
+[0.524s] [ 87%] Built target micro_ros_msgs__rosidl_generator_py
+[0.524s] [ 95%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c__pyext
+[0.524s] [ 95%] Built target micro_ros_msgs__rosidl_typesupport_c__pyext
+[0.524s] [100%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.524s] running egg_info
+[0.524s] writing micro_ros_msgs.egg-info/PKG-INFO
+[0.524s] writing dependency_links to micro_ros_msgs.egg-info/dependency_links.txt
+[0.524s] writing top-level names to micro_ros_msgs.egg-info/top_level.txt
+[0.525s] reading manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'
+[0.525s] writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'
+[0.525s] [100%] Built target ament_cmake_python_build_micro_ros_msgs_egg
+[0.711s] Invoked command in '/home/jose/microros_ws/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/microros_ws/install/odin_nav2:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/odin_comms:/opt/ros/humble /usr/bin/cmake --build /home/jose/microros_ws/build/micro_ros_msgs -- -j16 -l16

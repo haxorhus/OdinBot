@@ -1,10 +1,10 @@
 Metadata-Version: 2.1
 Name: odin-comms
 Version: 0.0.0
-Summary: TODO: Package description
+Summary: En este paquete se encuentran todos los nodos que comunican la PC con ROS con el robot fisico
 Home-page: UNKNOWN
 Maintainer: jose
-Maintainer-email: jose@todo.todo
+Maintainer-email: joseferreira@fiuna.edu.py
 License: TODO: License declaration
 Platform: UNKNOWN
 

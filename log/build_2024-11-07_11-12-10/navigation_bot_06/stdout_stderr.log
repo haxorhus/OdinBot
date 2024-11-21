@@ -1,0 +1,9 @@
+running egg_info
+creating ../../build/navigation_bot_06/navigation_bot_06.egg-info
+writing ../../build/navigation_bot_06/navigation_bot_06.egg-info/PKG-INFO
+writing dependency_links to ../../build/navigation_bot_06/navigation_bot_06.egg-info/dependency_links.txt
+writing entry points to ../../build/navigation_bot_06/navigation_bot_06.egg-info/entry_points.txt
+writing requirements to ../../build/navigation_bot_06/navigation_bot_06.egg-info/requires.txt
+writing top-level names to ../../build/navigation_bot_06/navigation_bot_06.egg-info/top_level.txt
+writing manifest file '../../build/navigation_bot_06/navigation_bot_06.egg-info/SOURCES.txt'
+error: package directory 'navigation_bot_06' does not exist

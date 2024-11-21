@@ -1,0 +1,23 @@
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+[33mCMake Warning at CMakeLists.txt:20 (find_package):
+  Could not find a configuration file for package "controller_manager" that
+  is compatible with requested version "4.0.0".
+
+  The following configuration files were considered but not accepted:
+
+    /opt/ros/humble/share/controller_manager/cmake/controller_managerConfig.cmake, version: 2.43.1
+
+
+[0m
+[31mCMake Error at CMakeLists.txt:23 (message):
+  ros2_control version 4.0.0 or higher is required.  Are you using the
+  correct branch of the ros2_control_demos repository?
+
+[0m
+-- Configuring incomplete, errors occurred!
+See also "/home/jose/microros_ws/build/ros2_control_demo_example_2/CMakeFiles/CMakeOutput.log".
