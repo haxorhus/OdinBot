@@ -29,6 +29,8 @@ setup(
             'map_gen = odin_nav.convert_to_map:main',
             'odom_node = odin_nav.odom_node:main',
             'goal_pub = odin_nav.goal_pub:main',
+            'tarea2 = odin_nav.tarea2:main',
+            'tf2_node = odin_nav.tf_node:main'
         ],
     },
 )

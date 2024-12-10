@@ -16,7 +16,7 @@ def generate_launch_description():
         parameters=[{'robot_description': Command(['xacro ', LaunchConfiguration('model')])}]
     )
     joint_state_publisher_node = launch_ros.actions.Node(
-        package='joint_state_publisher',
+        package='joint_state_publisher', 
         executable='joint_state_publisher',
         name='joint_state_publisher',
         arguments=[default_model_path],
@@ -52,18 +52,11 @@ def generate_launch_description():
         parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
     )
  
-    odom_node = launch_ros.actions.Node(
-        package='odin_nav',
-        executable='odom_node',
-        name= 'odom_node',
-        output='screen',
-        parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
-    )
 
-    control_twist_node = launch_ros.actions.Node(
-        package='odin_comms',
-        executable='control_twist',
-        name='control_twist',
+    tf2_node = launch_ros.actions.Node(
+        package='odin_nav',
+        executable='tf2_node',
+        name='tf2_node',
         output='screen',
         parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
 
@@ -90,12 +83,11 @@ def generate_launch_description():
                                             description='Flag to enable use_sim_time'),
         
         
-        map_generator_node,
-        odom_node,
         joint_state_publisher_node,
         robot_state_publisher_node,
         robot_localization_node,
+        map_generator_node,
         map_publisher_node, 
-        control_twist_node,
+        tf2_node,
         rviz_node
     ])

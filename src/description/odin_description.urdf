@@ -3,6 +3,7 @@
 
   <!-- Define robot constants -->
   <xacro:property name="base_width" value="0.21"/>
+  <xacro:property name="base_radius" value="0.1"/> <!-- 10 cm -->
   <xacro:property name="base_length" value="0.21"/>
   <xacro:property name="base_height" value="0.14"/>
 
@@ -42,7 +43,7 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <box size="${base_length} ${base_width} ${base_height}"/>
+        <cylinder radius="${base_radius}" length="${base_height}"/>      
       </geometry>
       <material name="Cyan">
         <color rgba="0 1.0 1.0 1.0"/>
@@ -51,11 +52,10 @@
 
     <collision>
       <geometry>
-        <box size="${base_length} ${base_width} ${base_height}"/>
+        <cylinder radius="${base_radius}" length="${base_height}"/>      
       </geometry>
     </collision>
 
-    <xacro:box_inertia m="15" w="${base_width}" d="${base_length}" h="${base_height}"/>
   </link>
 
   <!-- Robot Footprint -->
@@ -87,13 +87,12 @@
         </geometry>
       </collision>
 
-      <xacro:cylinder_inertia m="0.5" r="${wheel_radius}" h="${wheel_width}"/>
     </link>
 
     <joint name="${prefix}_joint" type="continuous">
       <parent link="base_link"/>
       <child link="${prefix}_link"/>
-      <origin xyz="${x_reflect*wheel_xoff} ${y_reflect*(base_width/2+wheel_ygap)} ${-wheel_zoff}" rpy="0 0 0"/>
+      <origin xyz="${x_reflect*wheel_xoff} ${y_reflect*(base_radius+wheel_ygap)} ${-wheel_zoff}" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>    
   </xacro:macro>
@@ -101,34 +100,30 @@
   <xacro:wheel prefix="drivewhl_l" x_reflect="-1" y_reflect="1" />
  
   <xacro:wheel prefix="drivewhl_r" x_reflect="-1" y_reflect="-1" />
-    
-  <!-- Caster Wheel
-  <link name="front_caster">
-    <visual>
-      <geometry>
-        <sphere radius="${(wheel_radius+wheel_zoff-(base_height/2))}"/>
-      </geometry>
-      <material name="Cyan">
-        <color rgba="0 1.0 1.0 1.0"/>
-      </material>
-    </visual>
 
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="${(wheel_radius+wheel_zoff-(base_height/2))}"/>
-      </geometry>
-    </collision>
-
-    <xacro:sphere_inertia m="0.5" r="${(wheel_radius+wheel_zoff-(base_height/2))}"/>
-  </link>
-
-  <joint name="caster_joint" type="fixed">
+  <!-- Sensor central -->    
+  <link name="ultrasonic_front"/>
+  <joint name="ultrasonic_front_joint" type="fixed">
     <parent link="base_link"/>
-    <child link="front_caster"/>
-    <origin xyz="${caster_xoff} 0.0 ${-(base_height/2)}" rpy="0 0 0"/>
-  </joint> 
-  -->
+    <child link="ultrasonic_front"/>
+    <origin xyz="0.1 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Sensor izquierdo -->
+  <link name="ultrasonic_left"/>
+  <joint name="ultrasonic_left_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="ultrasonic_left"/>
+    <origin xyz="0.0707 0.0707 0" rpy="0 0 0.7854"/>
+  </joint>
+
+  <!-- Sensor derecho -->
+  <link name="ultrasonic_right"/>
+  <joint name="ultrasonic_right_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="ultrasonic_right"/>
+    <origin xyz="0.0707 -0.0707 0" rpy="0 0 -0.7854"/>
+  </joint>
 
 
   <gazebo>

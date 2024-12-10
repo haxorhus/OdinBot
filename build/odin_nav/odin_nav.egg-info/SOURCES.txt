@@ -16,6 +16,8 @@ odin_nav/convert_to_map.py
 odin_nav/goal_pub.py
 odin_nav/map_pub.py
 odin_nav/odom_node.py
+odin_nav/tarea2.py
+odin_nav/tf_node.py
 resource/odin_nav
 rviz/urdf_config.rviz
 test/test_copyright.py

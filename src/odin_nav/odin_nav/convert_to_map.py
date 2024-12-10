@@ -27,7 +27,7 @@ class ImageProcessorNode(Node):
         self.map_dir = '/home/jose/microros_ws/src/maps'
 
         # Variables de configuración
-        self.map_resolution = 0.005  # Resolución en metros/píxel
+        self.map_resolution = 0.0005  # Resolución en metros/píxel
         self.map_size_meters = 2.7   # Tamaño del mapa en metros
 
         # Variable para almacenar la posición inicial del robot
@@ -81,7 +81,7 @@ class ImageProcessorNode(Node):
             goal_pose.header.frame_id = 'map'
             goal_pose.header.stamp = self.get_clock().now().to_msg()
             goal_pose.pose.position.x = cx_goal * scale_factor_x
-            goal_pose.pose.position.y = cy_goal * scale_factor_y
+            goal_pose.pose.position.y = (h - cy_goal) * scale_factor_y
             goal_pose.pose.orientation.w = 1.0
 
             #publicar la posicion del objetivo
@@ -101,6 +101,8 @@ class ImageProcessorNode(Node):
         mask_red = mask_red1 + mask_red2
 
         binary_red = cv2.bitwise_not(mask_red)  # Invertir para fondo blanco
+        binary_red = cv2.flip(binary_red, 0)  # Flip vertical
+
         
         pgm_filename = os.path.join(self.map_dir, 'map.pgm')
         cv2.imwrite(pgm_filename, binary_red)
@@ -119,7 +121,7 @@ class ImageProcessorNode(Node):
         self.robot_position_pub.publish(robot_pose)
 
         # Mostrar la imagen con los contornos resaltados
-        cv2.imshow('Detecciones', marked_image)
+#        cv2.imshow('Detecciones', marked_image)
         cv2.waitKey(1)
 
     def calculate_positions(self, cropped_image, width_px, height_px):
@@ -156,7 +158,7 @@ class ImageProcessorNode(Node):
         robot_pose.header.frame_id = 'odom'
         robot_pose.header.stamp = self.get_clock().now().to_msg()
         robot_pose.pose.position.x = cx_robot * scale_factor_x
-        robot_pose.pose.position.y = cy_robot * scale_factor_y
+        robot_pose.pose.position.y = (height_px - cy_robot) * scale_factor_y
         robot_pose.pose.orientation.w = 1.0
 
         return robot_pose, marked_image

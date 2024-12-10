@@ -18,14 +18,14 @@ class OdomPublisher(Node):
         self.position_sub = self.create_subscription(PoseStamped, '/odin/robot_position', self.position_callback, 10)
 
         # Variables de odometría
-        self.x = 0.0
-        self.y = 0.0
+        self.x = 0.2
+        self.y = 0.2
         self.theta = 0.0
         self.initialized = False  # Para verificar si la posición inicial ya fue recibida
 
         # Parámetros del robot
         self.wheel_radius = 0.0326  # Radio de las ruedas en metros
-        self.wheel_base = 0.2  # Distancia entre las ruedas en metros
+        self.wheel_base = 0.17  # Distancia entre las ruedas en metros
         self.dt = 1.0  # Intervalo de tiempo de actualización en segundos
 
         self.get_logger().info('Nodo de publicación de odometría y transformadas iniciado')
@@ -53,8 +53,8 @@ class OdomPublisher(Node):
             self.get_logger().warn('Datos de /enc_vel no válidos')
             return
 
-        rpm_left = msg.data[1] /2 
-        rpm_right = msg.data[0] /2
+        rpm_left = msg.data[1]
+        rpm_right = msg.data[0] 
 
         # Convertir RPM a velocidad angular (rad/s)
         omega_left = (rpm_left / 60.0) * 2 * math.pi
@@ -115,8 +115,14 @@ class OdomPublisher(Node):
         self.publish_static_transform('base_link', 'base_footprint', 0.0, 0.0, 0.0, 0, 0, 0)
 
         # Publicar transformadas base_link => drivewhl_l_joint y base_link => drivewhl_r_joint
-        self.publish_static_transform('base_link', 'drivewhl_l_joint', 0.0, 0.1, 0.0, 0, 0, 0)
-        self.publish_static_transform('base_link', 'drivewhl_r_joint', 0.0, -0.1, 0.0, 0, 0, 0)
+        self.publish_static_transform('base_link', 'drivewhl_l_link', 0.0, 0.1, 0.0, 0, 0, 0)
+        self.publish_static_transform('base_link', 'drivewhl_r_link', 0.0, -0.1, 0.0, 0, 0, 0)
+
+    # Publicar transformaciones estáticas para los sensores ultrasónicos
+        self.publish_static_transform('base_link', 'ultrasonic_front', 0.1, 0.0, 0.0, 0, 0, 0)
+        self.publish_static_transform('base_link', 'ultrasonic_left', 0.0707, 0.0707, 0.0, 0, 0, 0.7854)
+        self.publish_static_transform('base_link', 'ultrasonic_right', 0.0707, -0.0707, 0.0, 0, 0, -0.7854)
+        
 
     def publish_static_transform(self, parent_frame, child_frame, x, y, z, roll, pitch, yaw):
         transform = TransformStamped()

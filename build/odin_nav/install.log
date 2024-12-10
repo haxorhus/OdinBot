@@ -1,11 +1,15 @@
+/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/tarea2.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/odom_node.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__init__.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/convert_to_map.py
+/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/tf_node.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/map_pub.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/goal_pub.py
+/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/tarea2.cpython-310.pyc
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/odom_node.cpython-310.pyc
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/__init__.cpython-310.pyc
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/convert_to_map.cpython-310.pyc
+/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/tf_node.cpython-310.pyc
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/map_pub.cpython-310.pyc
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/goal_pub.cpython-310.pyc
 /home/jose/microros_ws/install/odin_nav/share/odin_nav/config/nav2_params.yaml
@@ -25,3 +29,5 @@
 /home/jose/microros_ws/install/odin_nav/lib/odin_nav/map_gen
 /home/jose/microros_ws/install/odin_nav/lib/odin_nav/map_pub
 /home/jose/microros_ws/install/odin_nav/lib/odin_nav/odom_node
+/home/jose/microros_ws/install/odin_nav/lib/odin_nav/tarea2
+/home/jose/microros_ws/install/odin_nav/lib/odin_nav/tf2_node
