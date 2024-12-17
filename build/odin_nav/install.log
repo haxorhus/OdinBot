@@ -1,3 +1,4 @@
+/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/box_pub.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/tarea2.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/odom_node.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__init__.py
@@ -5,6 +6,7 @@
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/tf_node.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/map_pub.py
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/goal_pub.py
+/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/box_pub.cpython-310.pyc
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/tarea2.cpython-310.pyc
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/odom_node.cpython-310.pyc
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/__pycache__/__init__.cpython-310.pyc
@@ -25,6 +27,7 @@
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav-0.0.0-py3.10.egg-info/requires.txt
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav-0.0.0-py3.10.egg-info/zip-safe
 /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav-0.0.0-py3.10.egg-info/PKG-INFO
+/home/jose/microros_ws/install/odin_nav/lib/odin_nav/box_pub
 /home/jose/microros_ws/install/odin_nav/lib/odin_nav/goal_pub
 /home/jose/microros_ws/install/odin_nav/lib/odin_nav/map_gen
 /home/jose/microros_ws/install/odin_nav/lib/odin_nav/map_pub

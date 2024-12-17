@@ -1,4 +1,5 @@
 import rclpy
+import math
 from rclpy.node import Node
 from geometry_msgs.msg import TransformStamped
 from nav_msgs.msg import Odometry
@@ -6,16 +7,28 @@ import tf2_ros
 from sensor_msgs.msg import Range
 from std_msgs.msg import Float32MultiArray
 from transforms3d.euler import euler2quat
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 
 
 class StaticTransformPublisher(Node):
     def __init__(self):
         super().__init__('static_transform_publisher')
 
+        # Inicialización de variables de posición y orientación
+        self.pos_x = 0.0
+        self.pos_y = 0.0
+        self.yaw = 0.0
+        self.last_time = self.get_clock().now()
+        
         # Crear broadcasters de TF
         self.tf_broadcaster = tf2_ros.StaticTransformBroadcaster(self)
         self.tf_dynamic_broadcaster = tf2_ros.TransformBroadcaster(self)
 
+        best_effort_qos = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10  # Define el tamaño de la cola
+        )
         # Publicadores para los sensores ultrasónicos
         self.ultrasonic_front_pub = self.create_publisher(Range, '/odin/ultrasound/front', 10)
         self.ultrasonic_left_pub = self.create_publisher(Range, '/odin/ultrasound/left', 10)
@@ -23,8 +36,8 @@ class StaticTransformPublisher(Node):
         self.odom_pub = self.create_publisher(Odometry, '/odin/odom', 10)
 
         # Subscripciones
-        self.subscription_us_distance = self.create_subscription(Float32MultiArray, '/odin/us_distance', self.us_distance_callback, 10)
-        self.subscription_odom = self.create_subscription(Float32MultiArray, '/odin/data', self.data_callback, 10)
+        self.subscription_us_distance = self.create_subscription(Float32MultiArray, '/odin/us_distance', self.us_distance_callback, best_effort_qos)
+        self.subscription_odom = self.create_subscription(Float32MultiArray, '/odin/data', self.data_callback, best_effort_qos)
 
 
     def publish_static_transform(self, parent_frame, child_frame, x, y, z, roll, pitch, yaw):
@@ -55,24 +68,32 @@ class StaticTransformPublisher(Node):
         if len(msg.data) != 5:
             self.get_logger().warn('El mensaje /odin/data no tiene 5 valores.')
             return
-        # Extraer valores del vector
+
+        # Extraer velocidades lineal y angular
         vel_lineal = msg.data[0]
         vel_angular = msg.data[1]
-        pos_x = msg.data[2]
-        pos_y = msg.data[3]
-        yaw = msg.data[4]
+
+        # Obtener el tiempo actual y calcular el delta de tiempo
+        current_time = self.get_clock().now()
+        dt = (current_time - self.last_time).nanoseconds / 1e9  # Convertir nanosegundos a segundos
+        self.last_time = current_time
+
+        # Actualizar posición y orientación usando cinemática diferencial
+        self.yaw += vel_angular * dt
+        self.pos_x += vel_lineal * dt * math.cos(self.yaw)
+        self.pos_y += vel_lineal * dt * math.sin(self.yaw)
 
         # Crear y publicar mensaje de odometría
         odom_msg = Odometry()
-        odom_msg.header.stamp = self.get_clock().now().to_msg()
+        odom_msg.header.stamp = current_time.to_msg()
         odom_msg.header.frame_id = "odom"
         odom_msg.child_frame_id = "base_link"
 
-        # Configurar posición
-        odom_msg.pose.pose.position.x = pos_x
-        odom_msg.pose.pose.position.y = pos_y
+        # Configurar posición calculada
+        odom_msg.pose.pose.position.x = self.pos_x
+        odom_msg.pose.pose.position.y = self.pos_y
         odom_msg.pose.pose.position.z = 0.0
-        quat = euler2quat(0, 0, yaw)  # Convertir yaw a cuaternión
+        quat = euler2quat(0, 0, self.yaw)  # Convertir yaw a cuaternión
         odom_msg.pose.pose.orientation.x = quat[1]
         odom_msg.pose.pose.orientation.y = quat[2]
         odom_msg.pose.pose.orientation.z = quat[3]
@@ -84,7 +105,7 @@ class StaticTransformPublisher(Node):
 
         self.odom_pub.publish(odom_msg)
 
-        # Publicar todas las transformaciones estáticas
+        # Publicar transformaciones como antes
         self.publish_static_transform('base_link', 'base_footprint', 0.0, 0.0, 0.0, 0, 0, 0)
         self.publish_static_transform('base_link', 'drivewhl_l_link', 0.0, 0.1, 0.0, 0, 0, 0)
         self.publish_static_transform('base_link', 'drivewhl_r_link', 0.0, -0.1, 0.0, 0, 0, 0)
@@ -93,7 +114,7 @@ class StaticTransformPublisher(Node):
         self.publish_static_transform('base_link', 'ultrasonic_right', 0.0707, -0.0707, 0.0, 0, 0, -0.7854)
 
         # Publicar la transformación odom => base_link
-        self.publish_transform(pos_x, pos_y, yaw)
+        self.publish_transform(self.pos_x, self.pos_y, self.yaw)
     
     def publish_transform(self, x, y, yaw):
         """

@@ -30,7 +30,8 @@ setup(
             'odom_node = odin_nav.odom_node:main',
             'goal_pub = odin_nav.goal_pub:main',
             'tarea2 = odin_nav.tarea2:main',
-            'tf2_node = odin_nav.tf_node:main'
+            'tf2_node = odin_nav.tf_node:main',
+            'box_pub = odin_nav.box_pub:main'
         ],
     },
 )

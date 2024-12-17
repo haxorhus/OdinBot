@@ -1,0 +1,670 @@
+[0.000000] (-) TimerEvent: {}
+[0.000465] (micro_ros_msgs) JobQueued: {'identifier': 'micro_ros_msgs', 'dependencies': OrderedDict()}
+[0.000514] (micro_ros_setup) JobQueued: {'identifier': 'micro_ros_setup', 'dependencies': OrderedDict()}
+[0.000616] (odin_nav) JobQueued: {'identifier': 'odin_nav', 'dependencies': OrderedDict()}
+[0.000631] (micro_ros_agent) JobQueued: {'identifier': 'micro_ros_agent', 'dependencies': OrderedDict([('micro_ros_msgs', '/home/jose/microros_ws/install/micro_ros_msgs')])}
+[0.000648] (micro_ros_msgs) JobStarted: {'identifier': 'micro_ros_msgs'}
+[0.099794] (-) TimerEvent: {}
+[0.200073] (-) TimerEvent: {}
+[0.300373] (-) TimerEvent: {}
+[0.400661] (-) TimerEvent: {}
+[0.501041] (micro_ros_setup) JobStarted: {'identifier': 'micro_ros_setup'}
+[0.501170] (-) TimerEvent: {}
+[0.528083] (odin_nav) JobStarted: {'identifier': 'odin_nav'}
+[0.601288] (-) TimerEvent: {}
+[0.701577] (-) TimerEvent: {}
+[0.801904] (-) TimerEvent: {}
+[0.847309] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'cmake'}
+[0.901980] (-) TimerEvent: {}
+[1.002343] (-) TimerEvent: {}
+[1.102634] (-) TimerEvent: {}
+[1.129935] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'build'}
+[1.130597] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jose/microros_ws/build/micro_ros_msgs', '--', '-j16', '-l16'], 'cwd': '/home/jose/microros_ws/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jose'), ('LC_TIME', 'es_PY.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/jose/microros_ws/install/micro_ros_agent/lib:/home/jose/microros_ws/install/micro_ros_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jose'), ('OLDPWD', '/home/jose'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_PY.UTF-8'), ('SYSTEMD_EXEC_PID', '2471'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/jose/microros_ws/install:/home/jose/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'jose'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jose'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/jose/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jose-ubuntu:@/tmp/.ICE-unix/2180,unix/jose-ubuntu:/tmp/.ICE-unix/2180'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_PY.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/26ffc792_8697_43a3_b376_dd630f8a8f15'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_PY.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_PY.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_PY.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_PY.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jose/microros_ws/build/micro_ros_msgs'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/jose/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jose/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jose/turtlebot3_ws/install/tb3_sim/lib/python3.10/site-packages:/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages:/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_PY.UTF-8'), ('LC_PAPER', 'es_PY.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble')]), 'shell': False}
+[1.167762] (micro_ros_setup) JobProgress: {'identifier': 'micro_ros_setup', 'progress': 'cmake'}
+[1.202735] (-) TimerEvent: {}
+[1.303046] (-) TimerEvent: {}
+[1.335660] (micro_ros_setup) JobProgress: {'identifier': 'micro_ros_setup', 'progress': 'build'}
+[1.336297] (micro_ros_setup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jose/microros_ws/build/micro_ros_setup', '--', '-j16', '-l16'], 'cwd': '/home/jose/microros_ws/build/micro_ros_setup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jose'), ('LC_TIME', 'es_PY.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/jose/microros_ws/install/micro_ros_agent/lib:/home/jose/microros_ws/install/micro_ros_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jose'), ('OLDPWD', '/home/jose'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_PY.UTF-8'), ('SYSTEMD_EXEC_PID', '2471'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/jose/microros_ws/install:/home/jose/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'jose'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jose'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/jose/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jose-ubuntu:@/tmp/.ICE-unix/2180,unix/jose-ubuntu:/tmp/.ICE-unix/2180'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_PY.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/26ffc792_8697_43a3_b376_dd630f8a8f15'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_PY.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_PY.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_PY.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_PY.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jose/microros_ws/build/micro_ros_setup'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/jose/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jose/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jose/turtlebot3_ws/install/tb3_sim/lib/python3.10/site-packages:/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages:/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_PY.UTF-8'), ('LC_PAPER', 'es_PY.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble')]), 'shell': False}
+[1.403149] (-) TimerEvent: {}
+[1.503435] (-) TimerEvent: {}
+[1.603747] (-) TimerEvent: {}
+[1.704077] (-) TimerEvent: {}
+[1.804395] (-) TimerEvent: {}
+[1.904670] (-) TimerEvent: {}
+[2.004960] (-) TimerEvent: {}
+[2.105274] (-) TimerEvent: {}
+[2.205573] (-) TimerEvent: {}
+[2.305899] (-) TimerEvent: {}
+[2.406273] (-) TimerEvent: {}
+[2.506629] (-) TimerEvent: {}
+[2.606959] (-) TimerEvent: {}
+[2.707223] (-) TimerEvent: {}
+[2.807536] (-) TimerEvent: {}
+[2.907843] (-) TimerEvent: {}
+[3.008169] (-) TimerEvent: {}
+[3.108573] (-) TimerEvent: {}
+[3.208875] (-) TimerEvent: {}
+[3.309206] (-) TimerEvent: {}
+[3.409595] (-) TimerEvent: {}
+[3.509863] (-) TimerEvent: {}
+[3.610167] (-) TimerEvent: {}
+[3.710467] (-) TimerEvent: {}
+[3.810697] (-) TimerEvent: {}
+[3.910961] (-) TimerEvent: {}
+[4.011311] (-) TimerEvent: {}
+[4.111701] (-) TimerEvent: {}
+[4.211996] (-) TimerEvent: {}
+[4.312313] (-) TimerEvent: {}
+[4.412608] (-) TimerEvent: {}
+[4.512875] (-) TimerEvent: {}
+[4.613165] (-) TimerEvent: {}
+[4.713423] (-) TimerEvent: {}
+[4.813709] (-) TimerEvent: {}
+[4.914009] (-) TimerEvent: {}
+[4.950992] (micro_ros_setup) CommandEnded: {'returncode': 0}
+[4.978340] (micro_ros_setup) JobProgress: {'identifier': 'micro_ros_setup', 'progress': 'install'}
+[4.987291] (micro_ros_setup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jose/microros_ws/build/micro_ros_setup'], 'cwd': '/home/jose/microros_ws/build/micro_ros_setup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jose'), ('LC_TIME', 'es_PY.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/jose/microros_ws/install/micro_ros_agent/lib:/home/jose/microros_ws/install/micro_ros_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jose'), ('OLDPWD', '/home/jose'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_PY.UTF-8'), ('SYSTEMD_EXEC_PID', '2471'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/jose/microros_ws/install:/home/jose/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'jose'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jose'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/jose/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jose-ubuntu:@/tmp/.ICE-unix/2180,unix/jose-ubuntu:/tmp/.ICE-unix/2180'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_PY.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/26ffc792_8697_43a3_b376_dd630f8a8f15'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_PY.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_PY.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_PY.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_PY.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jose/microros_ws/build/micro_ros_setup'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/jose/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jose/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jose/turtlebot3_ws/install/tb3_sim/lib/python3.10/site-packages:/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages:/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_PY.UTF-8'), ('LC_PAPER', 'es_PY.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble')]), 'shell': False}
+[5.014104] (-) TimerEvent: {}
+[5.037297] (micro_ros_setup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.046896] (micro_ros_setup) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.047108] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/ament_index/resource_index/package_run_dependencies/micro_ros_setup\n'}
+[5.047307] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/ament_index/resource_index/parent_prefix_path/micro_ros_setup\n'}
+[5.047491] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/ament_prefix_path.sh\n'}
+[5.047652] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/ament_prefix_path.dsv\n'}
+[5.047824] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/path.sh\n'}
+[5.047973] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/path.dsv\n'}
+[5.048139] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.bash\n'}
+[5.048315] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.sh\n'}
+[5.048463] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.zsh\n'}
+[5.048611] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.dsv\n'}
+[5.048725] (micro_ros_setup) StdoutLine: {'line': b'-- Symlinking: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/package.dsv\n'}
+[5.072319] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/ament_index/resource_index/packages/micro_ros_setup\n'}
+[5.072548] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/cmake/micro_ros_setupConfig.cmake\n'}
+[5.072677] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/cmake/micro_ros_setupConfig-version.cmake\n'}
+[5.072786] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/share/micro_ros_setup/package.xml\n'}
+[5.072887] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/create_ws.sh\n'}
+[5.072998] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/create_agent_ws.sh\n'}
+[5.073165] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/create_firmware_ws.sh\n'}
+[5.073294] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/configure_firmware.sh\n'}
+[5.073433] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/flash_firmware.sh\n'}
+[5.073557] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/build_firmware.sh\n'}
+[5.073682] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/build_agent.sh\n'}
+[5.073792] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/yaml_filter.py\n'}
+[5.073910] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/clean_env.sh\n'}
+[5.074002] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/component\n'}
+[5.074138] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config\n'}
+[5.074213] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/utils.sh\n'}
+[5.074314] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/client_ros2_packages.txt\n'}
+[5.074386] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian\n'}
+[5.074430] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/dev_uros_packages.repos\n'}
+[5.074481] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/dev_ros2_packages.txt\n'}
+[5.074522] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/generic\n'}
+[5.074566] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/generic/client_uros_packages.repos\n'}
+[5.074642] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/generic/supported_platforms\n'}
+[5.074687] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/generic/flash.sh\n'}
+[5.074729] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/generic/create.sh\n'}
+[5.074768] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/generic/client-colcon.meta\n'}
+[5.074808] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/generic/build.sh\n'}
+[5.074881] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/raspbian/generic/configure.sh\n'}
+[5.074926] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/agent_uros_packages.repos\n'}
+[5.074984] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/client_uros_packages.repos\n'}
+[5.075030] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android\n'}
+[5.075070] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android/dev_uros_packages.repos\n'}
+[5.075110] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android/dev_ros2_packages.txt\n'}
+[5.075149] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android/generic\n'}
+[5.075186] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android/generic/client_uros_packages.repos\n'}
+[5.075224] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android/generic/flash.sh\n'}
+[5.075303] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android/generic/create.sh\n'}
+[5.075361] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android/generic/client-colcon.meta\n'}
+[5.075402] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android/generic/build.sh\n'}
+[5.075441] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/android/generic/package.xml\n'}
+[5.075479] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr\n'}
+[5.075519] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/dev_uros_packages.repos\n'}
+[5.075558] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/list_apps.sh\n'}
+[5.075596] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/dev_ros2_packages.txt\n'}
+[5.075635] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic\n'}
+[5.075673] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic/board.repos\n'}
+[5.075720] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic/client_uros_packages.repos\n'}
+[5.075759] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic/supported_platforms\n'}
+[5.075798] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic/flash.sh\n'}
+[5.075836] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic/create.sh\n'}
+[5.075873] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic/client-colcon.meta\n'}
+[5.075948] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic/build.sh\n'}
+[5.076002] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic/package.xml\n'}
+[5.076042] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/zephyr/generic/configure.sh\n'}
+[5.076081] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos\n'}
+[5.076119] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze\n'}
+[5.076158] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/board.repos\n'}
+[5.076196] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/client_uros_packages.repos\n'}
+[5.076234] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/flash.sh\n'}
+[5.076320] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/create.sh\n'}
+[5.076372] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/client-colcon.meta\n'}
+[5.076413] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/build.sh\n'}
+[5.076452] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/package.xml\n'}
+[5.076494] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/configure.sh\n'}
+[5.076535] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21\n'}
+[5.076574] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/board.repos\n'}
+[5.076613] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/client_uros_packages.repos\n'}
+[5.076651] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/flash.sh\n'}
+[5.076725] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/create.sh\n'}
+[5.076767] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/client-colcon.meta\n'}
+[5.076807] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/build.sh\n'}
+[5.076846] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/package.xml\n'}
+[5.076893] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/configure.sh\n'}
+[5.076932] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/dev_uros_packages.repos\n'}
+[5.076970] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg\n'}
+[5.077009] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/board.repos\n'}
+[5.077047] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/client_uros_packages.repos\n'}
+[5.077085] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/flash.sh\n'}
+[5.077123] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/create.sh\n'}
+[5.077162] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/client-colcon.meta\n'}
+[5.077200] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/build.sh\n'}
+[5.077238] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/package.xml\n'}
+[5.077333] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/configure.sh\n'}
+[5.077386] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/list_apps.sh\n'}
+[5.077427] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407\n'}
+[5.077466] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/board.repos\n'}
+[5.077504] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/client_uros_packages.repos\n'}
+[5.077549] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/flash.sh\n'}
+[5.077590] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/create.sh\n'}
+[5.077629] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/client-colcon.meta\n'}
+[5.077666] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/build.sh\n'}
+[5.077704] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/package.xml\n'}
+[5.077743] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/configure.sh\n'}
+[5.077821] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re\n'}
+[5.077862] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/board.repos\n'}
+[5.077903] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/client_uros_packages.repos\n'}
+[5.077944] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/flash.sh\n'}
+[5.077992] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/create.sh\n'}
+[5.078032] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/client-colcon.meta\n'}
+[5.078071] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/build.sh\n'}
+[5.078109] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/package.xml\n'}
+[5.078148] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/configure.sh\n'}
+[5.078186] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/dev_ros2_packages.txt\n'}
+[5.078223] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32\n'}
+[5.078306] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32/board.repos\n'}
+[5.078360] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32/client_uros_packages.repos\n'}
+[5.078412] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32/flash.sh\n'}
+[5.078472] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32/create.sh\n'}
+[5.078514] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32/README.md\n'}
+[5.078571] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32/client-colcon.meta\n'}
+[5.078613] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32/build.sh\n'}
+[5.078652] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32/package.xml\n'}
+[5.078691] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/esp32/configure.sh\n'}
+[5.078730] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi\n'}
+[5.078768] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/board.repos\n'}
+[5.078807] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/client_uros_packages.repos\n'}
+[5.078846] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/flash.sh\n'}
+[5.078884] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/create.sh\n'}
+[5.078923] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/client-colcon.meta\n'}
+[5.078962] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/build.sh\n'}
+[5.079001] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/package.xml\n'}
+[5.079040] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/configure.sh\n'}
+[5.079090] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed\n'}
+[5.079159] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/dev_uros_packages.repos\n'}
+[5.079199] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/list_apps.sh\n'}
+[5.079238] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/dev_ros2_packages.txt\n'}
+[5.079290] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/generic\n'}
+[5.079328] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/generic/board.repos\n'}
+[5.079363] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/generic/client_uros_packages.repos\n'}
+[5.079399] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/generic/supported_platforms\n'}
+[5.079434] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/generic/flash.sh\n'}
+[5.079470] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/generic/create.sh\n'}
+[5.079505] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/generic/build.sh\n'}
+[5.079540] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/mbed/generic/package.xml\n'}
+[5.079574] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib\n'}
+[5.079609] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/dev_uros_packages.repos\n'}
+[5.079643] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/dev_ros2_packages.txt\n'}
+[5.079678] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/generic\n'}
+[5.079712] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/client_uros_packages.repos\n'}
+[5.079747] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/demo_toolchain.cmake\n'}
+[5.079781] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/flash.sh\n'}
+[5.079817] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/create.sh\n'}
+[5.079852] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/client-colcon.meta\n'}
+[5.079886] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/build.sh\n'}
+[5.079921] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/package.xml\n'}
+[5.079958] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host\n'}
+[5.079993] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/dev_uros_packages.repos\n'}
+[5.080029] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/client_ros2_packages.txt\n'}
+[5.080099] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/dev_ros2_packages.txt\n'}
+[5.080143] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/generic\n'}
+[5.080180] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/generic/client_host_packages.repos\n'}
+[5.080216] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/generic/client-host-colcon.meta\n'}
+[5.080261] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/generic/flash.sh\n'}
+[5.080306] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/generic/create.sh\n'}
+[5.080341] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/generic/build.sh\n'}
+[5.080377] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/host/generic/package.xml\n'}
+[5.080411] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra\n'}
+[5.080448] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/dev_uros_packages.repos\n'}
+[5.080483] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/list_apps.sh\n'}
+[5.080519] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5\n'}
+[5.080554] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/board.repos\n'}
+[5.080590] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/client_uros_packages.repos\n'}
+[5.080633] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/flash.sh\n'}
+[5.080670] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/create.sh\n'}
+[5.080704] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/client-colcon.meta\n'}
+[5.080739] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/build.sh\n'}
+[5.080774] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/configure.sh\n'}
+[5.080810] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/renesas_ra/dev_ros2_packages.txt\n'}
+[5.080846] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_setup/./config/agent_ros2_packages.txt\n'}
+[5.097755] (micro_ros_setup) CommandEnded: {'returncode': 0}
+[5.114204] (-) TimerEvent: {}
+[5.114458] (micro_ros_msgs) StdoutLine: {'line': b'[  2%] Built target micro_ros_msgs__cpp\n'}
+[5.117374] (micro_ros_msgs) StdoutLine: {'line': b'[ 12%] Built target micro_ros_msgs__rosidl_generator_c\n'}
+[5.120628] (micro_ros_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_symlink_micro_ros_msgs\n'}
+[5.214309] (-) TimerEvent: {}
+[5.217274] (micro_ros_msgs) StdoutLine: {'line': b'[ 34%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c\n'}
+[5.217481] (micro_ros_msgs) StdoutLine: {'line': b'[ 34%] Built target micro_ros_msgs__rosidl_typesupport_c\n'}
+[5.220307] (micro_ros_msgs) StdoutLine: {'line': b'[ 44%] Built target micro_ros_msgs__rosidl_typesupport_cpp\n'}
+[5.221570] (micro_ros_msgs) StdoutLine: {'line': b'[ 65%] Built target micro_ros_msgs__rosidl_typesupport_introspection_cpp\n'}
+[5.221717] (micro_ros_msgs) StdoutLine: {'line': b'[ 65%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c\n'}
+[5.222163] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[5.314400] (-) TimerEvent: {}
+[5.345376] (micro_ros_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[5.345888] (micro_ros_msgs) StdoutLine: {'line': b'writing micro_ros_msgs.egg-info/PKG-INFO\n'}
+[5.389775] (micro_ros_msgs) StdoutLine: {'line': b'writing dependency_links to micro_ros_msgs.egg-info/dependency_links.txt\n'}
+[5.390008] (micro_ros_msgs) StdoutLine: {'line': b'writing top-level names to micro_ros_msgs.egg-info/top_level.txt\n'}
+[5.414496] (-) TimerEvent: {}
+[5.514834] (-) TimerEvent: {}
+[5.579378] (micro_ros_msgs) StdoutLine: {'line': b"reading manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[5.603990] (micro_ros_msgs) StdoutLine: {'line': b"writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[5.614923] (-) TimerEvent: {}
+[5.638997] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs\n'}
+[5.692128] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target ament_cmake_python_build_micro_ros_msgs_egg\n'}
+[5.715052] (-) TimerEvent: {}
+[5.815380] (-) TimerEvent: {}
+[5.971649] (micro_ros_msgs) StdoutLine: {'line': b'[ 78%] Built target micro_ros_msgs__py\n'}
+[5.971917] (-) TimerEvent: {}
+[6.072148] (-) TimerEvent: {}
+[6.172464] (-) TimerEvent: {}
+[6.251802] (micro_ros_setup) JobEnded: {'identifier': 'micro_ros_setup', 'rc': 0}
+[6.276278] (-) TimerEvent: {}
+[6.376561] (-) TimerEvent: {}
+[6.476923] (-) TimerEvent: {}
+[6.487355] (micro_ros_msgs) StdoutLine: {'line': b'[ 87%] Built target micro_ros_msgs__rosidl_generator_py\n'}
+[6.577044] (-) TimerEvent: {}
+[6.677298] (-) TimerEvent: {}
+[6.777607] (-) TimerEvent: {}
+[6.840135] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.840310] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_c__pyext\n'}
+[6.840387] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[6.853022] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[6.877690] (-) TimerEvent: {}
+[6.973879] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'install'}
+[6.974790] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jose/microros_ws/build/micro_ros_msgs'], 'cwd': '/home/jose/microros_ws/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jose'), ('LC_TIME', 'es_PY.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/jose/microros_ws/install/micro_ros_agent/lib:/home/jose/microros_ws/install/micro_ros_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jose'), ('OLDPWD', '/home/jose'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_PY.UTF-8'), ('SYSTEMD_EXEC_PID', '2471'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/jose/microros_ws/install:/home/jose/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'jose'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jose'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/jose/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jose-ubuntu:@/tmp/.ICE-unix/2180,unix/jose-ubuntu:/tmp/.ICE-unix/2180'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_PY.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/26ffc792_8697_43a3_b376_dd630f8a8f15'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_PY.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_PY.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_PY.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_PY.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jose/microros_ws/build/micro_ros_msgs'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/jose/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jose/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jose/turtlebot3_ws/install/tb3_sim/lib/python3.10/site-packages:/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages:/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_PY.UTF-8'), ('LC_PAPER', 'es_PY.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble')]), 'shell': False}
+[6.977760] (-) TimerEvent: {}
+[7.078028] (-) TimerEvent: {}
+[7.172145] (micro_ros_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.178094] (-) TimerEvent: {}
+[7.220956] (micro_ros_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[7.221322] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/rosidl_interfaces/micro_ros_msgs\n'}
+[7.221767] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.h\n'}
+[7.221893] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.h\n'}
+[7.222014] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.h\n'}
+[7.222123] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.h\n'}
+[7.222229] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.h\n'}
+[7.222329] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.h\n'}
+[7.222433] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.h\n'}
+[7.222526] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.h\n'}
+[7.222582] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.h\n'}
+[7.222647] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.h\n'}
+[7.222733] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.h\n'}
+[7.222792] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.h\n'}
+[7.222878] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[7.223003] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.sh\n'}
+[7.223111] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.dsv\n'}
+[7.223488] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_c.h\n'}
+[7.223595] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_c.h\n'}
+[7.223685] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_c.h\n'}
+[7.223776] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[7.224048] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_c.h\n'}
+[7.224158] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_c.h\n'}
+[7.224248] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_c.h\n'}
+[7.224350] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[7.224628] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__builder.hpp\n'}
+[7.224719] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.hpp\n'}
+[7.224809] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__traits.hpp\n'}
+[7.224902] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__builder.hpp\n'}
+[7.224999] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.hpp\n'}
+[7.225090] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__traits.hpp\n'}
+[7.225176] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__builder.hpp\n'}
+[7.225280] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.hpp\n'}
+[7.225363] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__traits.hpp\n'}
+[7.225450] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.hpp\n'}
+[7.225544] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.hpp\n'}
+[7.225638] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.hpp\n'}
+[7.226016] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.226111] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.226200] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.226295] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[7.226555] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.226646] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.226735] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.226863] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.sh\n'}
+[7.226964] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.dsv\n'}
+[7.227175] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/PKG-INFO\n'}
+[7.227280] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[7.227374] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[7.227458] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/top_level.txt\n'}
+[7.227914] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py\n'}
+[7.228008] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[7.228099] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[7.228184] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[7.228301] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[7.228386] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.228473] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.228553] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.228642] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py\n'}
+[7.228724] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py\n'}
+[7.228824] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity_s.c\n'}
+[7.228914] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py\n'}
+[7.228997] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph_s.c\n'}
+[7.229084] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py\n'}
+[7.229169] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node_s.c\n'}
+[7.248511] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.272409] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.278185] (-) TimerEvent: {}
+[7.378472] (-) TimerEvent: {}
+[7.478731] (-) TimerEvent: {}
+[7.487717] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.487984] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.idl\n'}
+[7.488104] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.idl\n'}
+[7.488284] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.idl\n'}
+[7.488430] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.msg\n'}
+[7.488539] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.msg\n'}
+[7.488640] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.msg\n'}
+[7.488726] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/package_run_dependencies/micro_ros_msgs\n'}
+[7.488804] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/parent_prefix_path/micro_ros_msgs\n'}
+[7.488855] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.sh\n'}
+[7.488916] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.dsv\n'}
+[7.488995] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.sh\n'}
+[7.489079] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.dsv\n'}
+[7.489185] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.bash\n'}
+[7.489300] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.sh\n'}
+[7.489419] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.zsh\n'}
+[7.489526] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.dsv\n'}
+[7.489601] (micro_ros_msgs) StdoutLine: {'line': b'-- Symlinking: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv\n'}
+[7.498366] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/packages/micro_ros_msgs\n'}
+[7.498523] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[7.498611] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.498861] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.499113] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.499421] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[7.499714] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.499872] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[7.500032] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig.cmake\n'}
+[7.500128] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig-version.cmake\n'}
+[7.500233] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.xml\n'}
+[7.560713] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so\n'}
+[7.578827] (-) TimerEvent: {}
+[7.610548] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[7.675172] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so\n'}
+[7.678899] (-) TimerEvent: {}
+[7.705043] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so\n'}
+[7.705330] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[7.760683] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[7.761220] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so\n'}
+[7.778985] (-) TimerEvent: {}
+[7.879266] (-) TimerEvent: {}
+[7.979578] (-) TimerEvent: {}
+[8.079904] (-) TimerEvent: {}
+[8.180235] (-) TimerEvent: {}
+[8.280565] (-) TimerEvent: {}
+[8.344873] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs'...\n"}
+[8.345116] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg'...\n"}
+[8.380698] (-) TimerEvent: {}
+[8.394421] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[8.431111] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport.cmake\n'}
+[8.431320] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[8.467837] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[8.468096] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[8.480776] (-) TimerEvent: {}
+[8.492783] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[8.493015] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[8.529878] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport.cmake\n'}
+[8.530095] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[8.554704] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cppExport.cmake\n'}
+[8.579663] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[8.579765] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[8.580850] (-) TimerEvent: {}
+[8.616785] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[8.617170] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[8.654110] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[8.654595] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[8.678846] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport.cmake\n'}
+[8.678977] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[8.680932] (-) TimerEvent: {}
+[8.781153] (-) TimerEvent: {}
+[8.881492] (-) TimerEvent: {}
+[8.935317] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[8.981609] (-) TimerEvent: {}
+[9.081987] (-) TimerEvent: {}
+[9.182331] (-) TimerEvent: {}
+[9.282678] (-) TimerEvent: {}
+[9.383012] (-) TimerEvent: {}
+[9.483374] (-) TimerEvent: {}
+[9.583797] (-) TimerEvent: {}
+[9.684148] (-) TimerEvent: {}
+[9.784450] (-) TimerEvent: {}
+[9.884728] (-) TimerEvent: {}
+[9.985009] (-) TimerEvent: {}
+[10.085383] (-) TimerEvent: {}
+[10.185705] (-) TimerEvent: {}
+[10.286012] (-) TimerEvent: {}
+[10.386495] (-) TimerEvent: {}
+[10.392922] (micro_ros_msgs) JobEnded: {'identifier': 'micro_ros_msgs', 'rc': 0}
+[10.524844] (-) TimerEvent: {}
+[10.524987] (micro_ros_agent) JobStarted: {'identifier': 'micro_ros_agent'}
+[10.624958] (-) TimerEvent: {}
+[10.725271] (-) TimerEvent: {}
+[10.776674] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'cmake'}
+[10.825320] (-) TimerEvent: {}
+[10.850645] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'build'}
+[10.851331] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jose/microros_ws/build/micro_ros_agent', '--', '-j16', '-l16'], 'cwd': '/home/jose/microros_ws/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jose'), ('LC_TIME', 'es_PY.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jose/microros_ws/install/micro_ros_msgs/lib:/home/jose/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/jose/microros_ws/install/micro_ros_agent/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jose'), ('OLDPWD', '/home/jose'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_PY.UTF-8'), ('SYSTEMD_EXEC_PID', '2471'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/jose/microros_ws/install:/home/jose/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'jose'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jose'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/jose/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jose-ubuntu:@/tmp/.ICE-unix/2180,unix/jose-ubuntu:/tmp/.ICE-unix/2180'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_PY.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/26ffc792_8697_43a3_b376_dd630f8a8f15'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_PY.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_PY.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_PY.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_PY.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jose/microros_ws/build/micro_ros_agent'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/jose/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jose/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jose/turtlebot3_ws/install/tb3_sim/lib/python3.10/site-packages:/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages:/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_PY.UTF-8'), ('LC_PAPER', 'es_PY.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jose/microros_ws/install/micro_ros_msgs:/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble')]), 'shell': False}
+[10.925427] (-) TimerEvent: {}
+[11.055318] (-) TimerEvent: {}
+[11.155689] (-) TimerEvent: {}
+[11.256085] (-) TimerEvent: {}
+[11.356426] (-) TimerEvent: {}
+[11.456735] (-) TimerEvent: {}
+[11.557049] (-) TimerEvent: {}
+[11.657371] (-) TimerEvent: {}
+[11.757695] (-) TimerEvent: {}
+[11.858017] (-) TimerEvent: {}
+[11.958438] (-) TimerEvent: {}
+[12.058829] (-) TimerEvent: {}
+[12.159267] (-) TimerEvent: {}
+[12.259653] (-) TimerEvent: {}
+[12.326840] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target micro_ros_agent\n'}
+[12.337989] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[12.359739] (-) TimerEvent: {}
+[12.382470] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'install'}
+[12.383017] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jose/microros_ws/build/micro_ros_agent'], 'cwd': '/home/jose/microros_ws/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jose'), ('LC_TIME', 'es_PY.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jose/microros_ws/install/micro_ros_msgs/lib:/home/jose/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/jose/microros_ws/install/micro_ros_agent/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jose'), ('OLDPWD', '/home/jose'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_PY.UTF-8'), ('SYSTEMD_EXEC_PID', '2471'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/jose/microros_ws/install:/home/jose/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'jose'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jose'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/jose/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jose-ubuntu:@/tmp/.ICE-unix/2180,unix/jose-ubuntu:/tmp/.ICE-unix/2180'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_PY.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/26ffc792_8697_43a3_b376_dd630f8a8f15'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_PY.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_PY.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_PY.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_PY.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jose/microros_ws/build/micro_ros_agent'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/jose/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jose/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jose/turtlebot3_ws/install/tb3_sim/lib/python3.10/site-packages:/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages:/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_PY.UTF-8'), ('LC_PAPER', 'es_PY.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/jose/microros_ws/install/micro_ros_msgs:/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble')]), 'shell': False}
+[12.459861] (-) TimerEvent: {}
+[12.560304] (-) TimerEvent: {}
+[12.660675] (-) TimerEvent: {}
+[12.760989] (-) TimerEvent: {}
+[12.861322] (-) TimerEvent: {}
+[12.872412] (micro_ros_agent) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.872561] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/ament_index/resource_index/package_run_dependencies/micro_ros_agent\n'}
+[12.872631] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/ament_index/resource_index/parent_prefix_path/micro_ros_agent\n'}
+[12.872701] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.sh\n'}
+[12.872780] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.dsv\n'}
+[12.872903] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/path.sh\n'}
+[12.872990] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/path.dsv\n'}
+[12.873043] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.bash\n'}
+[12.873091] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.sh\n'}
+[12.873150] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.zsh\n'}
+[12.873193] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.dsv\n'}
+[12.873229] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/package.dsv\n'}
+[12.896667] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/ament_index/resource_index/packages/micro_ros_agent\n'}
+[12.896847] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[12.896898] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig.cmake\n'}
+[12.896946] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig-version.cmake\n'}
+[12.896988] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/package.xml\n'}
+[12.921025] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent\n'}
+[12.921270] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/launch\n'}
+[12.921385] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/jose/microros_ws/install/micro_ros_agent/share/micro_ros_agent/launch/micro_ros_agent_launch.py\n'}
+[12.961416] (-) TimerEvent: {}
+[12.970727] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[13.061517] (-) TimerEvent: {}
+[13.161805] (-) TimerEvent: {}
+[13.262105] (-) TimerEvent: {}
+[13.362423] (-) TimerEvent: {}
+[13.462718] (-) TimerEvent: {}
+[13.562993] (-) TimerEvent: {}
+[13.663369] (-) TimerEvent: {}
+[13.763776] (-) TimerEvent: {}
+[13.864168] (-) TimerEvent: {}
+[13.964623] (-) TimerEvent: {}
+[14.064910] (-) TimerEvent: {}
+[14.165176] (-) TimerEvent: {}
+[14.265520] (-) TimerEvent: {}
+[14.365908] (-) TimerEvent: {}
+[14.466287] (-) TimerEvent: {}
+[14.566649] (-) TimerEvent: {}
+[14.667035] (-) TimerEvent: {}
+[14.767337] (-) TimerEvent: {}
+[14.867605] (-) TimerEvent: {}
+[14.968017] (-) TimerEvent: {}
+[15.068313] (-) TimerEvent: {}
+[15.168593] (-) TimerEvent: {}
+[15.268871] (-) TimerEvent: {}
+[15.369219] (-) TimerEvent: {}
+[15.430617] (micro_ros_agent) JobEnded: {'identifier': 'micro_ros_agent', 'rc': 0}
+[15.478879] (-) TimerEvent: {}
+[15.579271] (-) TimerEvent: {}
+[15.679638] (-) TimerEvent: {}
+[15.780059] (-) TimerEvent: {}
+[15.880485] (-) TimerEvent: {}
+[15.980796] (-) TimerEvent: {}
+[16.492681] (-) TimerEvent: {}
+[16.593104] (-) TimerEvent: {}
+[16.693530] (-) TimerEvent: {}
+[16.793889] (-) TimerEvent: {}
+[16.894300] (-) TimerEvent: {}
+[16.994659] (-) TimerEvent: {}
+[17.095084] (-) TimerEvent: {}
+[17.195411] (-) TimerEvent: {}
+[17.295773] (-) TimerEvent: {}
+[17.396152] (-) TimerEvent: {}
+[17.496516] (-) TimerEvent: {}
+[17.596869] (-) TimerEvent: {}
+[17.697168] (-) TimerEvent: {}
+[17.797532] (-) TimerEvent: {}
+[17.897941] (-) TimerEvent: {}
+[17.998452] (-) TimerEvent: {}
+[18.098766] (-) TimerEvent: {}
+[18.199027] (-) TimerEvent: {}
+[18.299367] (-) TimerEvent: {}
+[18.399785] (-) TimerEvent: {}
+[18.500099] (-) TimerEvent: {}
+[18.600537] (-) TimerEvent: {}
+[18.700980] (-) TimerEvent: {}
+[18.801338] (-) TimerEvent: {}
+[18.901643] (-) TimerEvent: {}
+[19.002013] (-) TimerEvent: {}
+[19.102471] (-) TimerEvent: {}
+[19.202893] (-) TimerEvent: {}
+[19.303268] (-) TimerEvent: {}
+[19.403551] (-) TimerEvent: {}
+[19.503848] (-) TimerEvent: {}
+[19.604291] (-) TimerEvent: {}
+[19.704706] (-) TimerEvent: {}
+[19.805109] (-) TimerEvent: {}
+[19.905513] (-) TimerEvent: {}
+[20.005908] (-) TimerEvent: {}
+[20.106224] (-) TimerEvent: {}
+[20.206604] (-) TimerEvent: {}
+[20.307022] (-) TimerEvent: {}
+[20.407455] (-) TimerEvent: {}
+[20.507828] (-) TimerEvent: {}
+[20.608240] (-) TimerEvent: {}
+[20.708546] (-) TimerEvent: {}
+[20.808867] (-) TimerEvent: {}
+[20.909182] (-) TimerEvent: {}
+[21.009609] (-) TimerEvent: {}
+[21.110001] (-) TimerEvent: {}
+[21.210365] (-) TimerEvent: {}
+[21.310751] (-) TimerEvent: {}
+[21.411130] (-) TimerEvent: {}
+[21.541050] (-) TimerEvent: {}
+[21.641464] (-) TimerEvent: {}
+[21.741813] (-) TimerEvent: {}
+[21.842301] (-) TimerEvent: {}
+[21.942602] (-) TimerEvent: {}
+[22.042966] (-) TimerEvent: {}
+[22.143307] (-) TimerEvent: {}
+[22.243564] (-) TimerEvent: {}
+[22.343867] (-) TimerEvent: {}
+[22.444202] (-) TimerEvent: {}
+[22.544576] (-) TimerEvent: {}
+[22.644983] (-) TimerEvent: {}
+[22.745362] (-) TimerEvent: {}
+[22.845773] (-) TimerEvent: {}
+[22.946070] (-) TimerEvent: {}
+[23.046384] (-) TimerEvent: {}
+[23.149681] (-) TimerEvent: {}
+[23.250000] (-) TimerEvent: {}
+[23.350376] (-) TimerEvent: {}
+[23.450795] (-) TimerEvent: {}
+[23.551144] (-) TimerEvent: {}
+[23.651517] (-) TimerEvent: {}
+[23.751830] (-) TimerEvent: {}
+[23.852137] (-) TimerEvent: {}
+[23.868471] (odin_nav) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/odin_nav', 'build', '--build-base', '/home/jose/microros_ws/build/odin_nav/build', 'install', '--record', '/home/jose/microros_ws/build/odin_nav/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jose/microros_ws/src/odin_nav', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jose', 'LC_TIME': 'es_PY.UTF-8', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jose/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/jose/microros_ws/install/micro_ros_agent/lib:/home/jose/microros_ws/install/micro_ros_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/jose', 'OLDPWD': '/home/jose', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'es_PY.UTF-8', 'SYSTEMD_EXEC_PID': '2471', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/jose/microros_ws/install:/home/jose/turtlebot3_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'jose', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'jose', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/jose/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/jose-ubuntu:@/tmp/.ICE-unix/2180,unix/jose-ubuntu:/tmp/.ICE-unix/2180', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'es_PY.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/26ffc792_8697_43a3_b376_dd630f8a8f15', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'es_PY.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.110', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/odin_nav:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'es_PY.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_PY.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'es_PY.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/jose/microros_ws/build/odin_nav', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/jose/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jose/microros_ws/build/odin_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jose/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jose/turtlebot3_ws/install/tb3_sim/lib/python3.10/site-packages:/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages:/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'es_PY.UTF-8', 'LC_PAPER': 'es_PY.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/jose/turtlebot3_ws/install/turtlebot3:/home/jose/turtlebot3_ws/install/turtlebot3_simulations:/home/jose/turtlebot3_ws/install/turtlebot3_bringup:/home/jose/turtlebot3_ws/install/turtlebot3_node:/home/jose/turtlebot3_ws/install/turtlebot3_navigation2:/home/jose/turtlebot3_ws/install/turtlebot3_fake_node:/home/jose/turtlebot3_ws/install/turtlebot3_msgs:/home/jose/turtlebot3_ws/install/turtlebot3_gazebo:/home/jose/turtlebot3_ws/install/turtlebot3_description:/home/jose/turtlebot3_ws/install/turtlebot3_cartographer:/home/jose/turtlebot3_ws/install/tb3_autonomy:/home/jose/microros_ws/install/micro_ros_setup:/home/jose/microros_ws/install/micro_ros_agent:/home/jose/microros_ws/install/micro_ros_msgs'}, 'shell': False}
+[23.952235] (-) TimerEvent: {}
+[24.044745] (odin_nav) StdoutLine: {'line': b'running egg_info\n'}
+[24.045164] (odin_nav) StdoutLine: {'line': b'writing ../../build/odin_nav/odin_nav.egg-info/PKG-INFO\n'}
+[24.052313] (-) TimerEvent: {}
+[24.152515] (-) TimerEvent: {}
+[24.252854] (-) TimerEvent: {}
+[24.353175] (-) TimerEvent: {}
+[24.421128] (odin_nav) StdoutLine: {'line': b'writing dependency_links to ../../build/odin_nav/odin_nav.egg-info/dependency_links.txt\n'}
+[24.421675] (odin_nav) StdoutLine: {'line': b'writing entry points to ../../build/odin_nav/odin_nav.egg-info/entry_points.txt\n'}
+[24.421915] (odin_nav) StdoutLine: {'line': b'writing requirements to ../../build/odin_nav/odin_nav.egg-info/requires.txt\n'}
+[24.422049] (odin_nav) StdoutLine: {'line': b'writing top-level names to ../../build/odin_nav/odin_nav.egg-info/top_level.txt\n'}
+[24.423574] (odin_nav) StdoutLine: {'line': b"reading manifest file '../../build/odin_nav/odin_nav.egg-info/SOURCES.txt'\n"}
+[24.453286] (-) TimerEvent: {}
+[24.553629] (-) TimerEvent: {}
+[24.653987] (-) TimerEvent: {}
+[24.680004] (odin_nav) StdoutLine: {'line': b"writing manifest file '../../build/odin_nav/odin_nav.egg-info/SOURCES.txt'\n"}
+[24.730464] (odin_nav) StdoutLine: {'line': b'running build\n'}
+[24.730703] (odin_nav) StdoutLine: {'line': b'running build_py\n'}
+[24.730937] (odin_nav) StdoutLine: {'line': b'copying odin_nav/convert_to_map.py -> /home/jose/microros_ws/build/odin_nav/build/lib/odin_nav\n'}
+[24.731135] (odin_nav) StdoutLine: {'line': b'copying odin_nav/tf_node.py -> /home/jose/microros_ws/build/odin_nav/build/lib/odin_nav\n'}
+[24.732555] (odin_nav) StdoutLine: {'line': b'running install\n'}
+[24.732830] (odin_nav) StdoutLine: {'line': b'running install_lib\n'}
+[24.733603] (odin_nav) StdoutLine: {'line': b'copying /home/jose/microros_ws/build/odin_nav/build/lib/odin_nav/convert_to_map.py -> /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav\n'}
+[24.733783] (odin_nav) StdoutLine: {'line': b'copying /home/jose/microros_ws/build/odin_nav/build/lib/odin_nav/tf_node.py -> /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav\n'}
+[24.734272] (odin_nav) StdoutLine: {'line': b'byte-compiling /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/convert_to_map.py to convert_to_map.cpython-310.pyc\n'}
+[24.754109] (-) TimerEvent: {}
+[24.790660] (odin_nav) StdoutLine: {'line': b'byte-compiling /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav/tf_node.py to tf_node.cpython-310.pyc\n'}
+[24.854236] (-) TimerEvent: {}
+[24.866680] (odin_nav) StdoutLine: {'line': b'running install_data\n'}
+[24.866906] (odin_nav) StdoutLine: {'line': b'copying config/nav2_params.yaml -> /home/jose/microros_ws/install/odin_nav/share/odin_nav/config\n'}
+[24.867314] (odin_nav) StdoutLine: {'line': b'running install_egg_info\n'}
+[24.869650] (odin_nav) StdoutLine: {'line': b"removing '/home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[24.869876] (odin_nav) StdoutLine: {'line': b'Copying ../../build/odin_nav/odin_nav.egg-info to /home/jose/microros_ws/install/odin_nav/lib/python3.10/site-packages/odin_nav-0.0.0-py3.10.egg-info\n'}
+[24.886657] (odin_nav) StdoutLine: {'line': b'running install_scripts\n'}
+[24.901583] (odin_nav) StdoutLine: {'line': b'Installing goal_pub script to /home/jose/microros_ws/install/odin_nav/lib/odin_nav\n'}
+[24.954366] (-) TimerEvent: {}
+[24.971566] (odin_nav) StdoutLine: {'line': b'Installing map_gen script to /home/jose/microros_ws/install/odin_nav/lib/odin_nav\n'}
+[25.054500] (-) TimerEvent: {}
+[25.154851] (-) TimerEvent: {}
+[25.255227] (-) TimerEvent: {}
+[25.323042] (odin_nav) StdoutLine: {'line': b'Installing map_pub script to /home/jose/microros_ws/install/odin_nav/lib/odin_nav\n'}
+[25.323388] (odin_nav) StdoutLine: {'line': b'Installing odom_node script to /home/jose/microros_ws/install/odin_nav/lib/odin_nav\n'}
+[25.323665] (odin_nav) StdoutLine: {'line': b'Installing tarea2 script to /home/jose/microros_ws/install/odin_nav/lib/odin_nav\n'}
+[25.323861] (odin_nav) StdoutLine: {'line': b'Installing tf2_node script to /home/jose/microros_ws/install/odin_nav/lib/odin_nav\n'}
+[25.324206] (odin_nav) StdoutLine: {'line': b"writing list of installed files to '/home/jose/microros_ws/build/odin_nav/install.log'\n"}
+[25.355323] (-) TimerEvent: {}
+[25.444749] (odin_nav) CommandEnded: {'returncode': 0}
+[25.455431] (-) TimerEvent: {}
+[25.555692] (-) TimerEvent: {}
+[25.655982] (-) TimerEvent: {}
+[25.756228] (-) TimerEvent: {}
+[25.856525] (-) TimerEvent: {}
+[25.915567] (odin_nav) JobEnded: {'identifier': 'odin_nav', 'rc': 0}
+[26.018375] (-) TimerEvent: {}
+[26.018487] (-) EventReactorShutdown: {}

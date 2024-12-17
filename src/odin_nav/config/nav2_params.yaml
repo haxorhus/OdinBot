@@ -36,8 +36,9 @@ bt_navigator:
     global_frame: map
     robot_base_frame: base_link
     odom_topic: /odometry/filtered
-    bt_loop_duration: 10
-    default_server_timeout: 20
+    #odom_topic: /odin/odom    
+    bt_loop_duration: 2
+    default_server_timeout: 10
     enable_groot_monitoring: True
     groot_zmq_publisher_port: 1666
     groot_zmq_server_port: 1667
@@ -85,84 +86,62 @@ bt_navigator_rclcpp_node:
 controller_server:
   ros__parameters:
     use_sim_time: True
-    controller_frequency: 10.0
-    min_x_velocity_threshold: 0.01
-    max_vel_x: 0.4
-    min_y_velocity_threshold: 0.5
-    min_theta_velocity_threshold: 1.0
-    failure_tolerance: 0.1
-    holonomic_robot: false
-    progress_checker_plugin: "progress_checker"
-    goal_checker_plugins: ["general_goal_checker"] # "precise_goal_checker"
+    controller_frequency: 20.0
+    min_x_velocity_threshold: 0.001
+    min_theta_velocity_threshold: 0.001
+    progress_checker_plugins: ["progress_checker"]
+    goal_checker_plugins: ["goal_checker"]
     controller_plugins: ["FollowPath"]
-    odom_topic: /odometry/filtered
-
-    # Progress checker parameters
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
       required_movement_radius: 0.5
       movement_time_allowance: 10.0
-    # Goal checker parameters
-    #precise_goal_checker:
-    #  plugin: "nav2_controller::SimpleGoalChecker"
-    #  xy_goal_tolerance: 0.25
-    #  yaw_goal_tolerance: 0.25
-    #  stateful: True
-    general_goal_checker:
-      stateful: True
+    goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.1
-      yaw_goal_tolerance: 0.5
-    # DWB parameters
+      yaw_goal_tolerance: 0.1
+      stateful: True
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
       debug_trajectory_details: True
-      min_vel_x: 0.01
-      max_vel_x: 0.4
-      max_vel_theta: 2.0
-      min_speed_xy: 0.0
-      max_speed_xy: 0.8
-      min_speed_theta: 1.0
-      max_speed_theta: 2.0
-      # Add high threshold velocity for turtlebot 3 issue.
-      # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
-      acc_lim_x: 2.5
-      acc_lim_y: 2.0
-      acc_lim_theta: 2.0
+      min_vel_x: 0.0
+      max_vel_x: 0.1  # Velocidad máxima lineal
+      min_vel_y: 0.0
+      max_vel_y: 0.0
+      max_vel_theta: 0.6  # Velocidad máxima angular
+      min_speed_xy: 0.001
+      max_speed_xy: 0.2
+      min_speed_theta: 0.1
+      acc_lim_x: 1.0
+      acc_lim_y: 0.0
+      acc_lim_theta: 1.0
       decel_lim_x: -2.5
       decel_lim_y: 0.0
-      decel_lim_theta: -2.0
+      decel_lim_theta: -3.2
       vx_samples: 20
       vy_samples: 5
       vtheta_samples: 20
-      sim_time: 1.0
+      sim_time: 1.7
       linear_granularity: 0.05
       angular_granularity: 0.025
-      transform_tolerance: 0.3
-      xy_goal_tolerance: 0.1
-      trans_stopped_velocity: 0.25
+      transform_tolerance: 0.2
+      xy_goal_tolerance: 0.25
+      trans_stopped_velocity: 0.001  # Garantiza que el robot se detenga completamente
       short_circuit_trajectory_evaluation: True
+      limit_vel_cmd_in_traj: False
       stateful: True
-      critics:
-        [
-          "RotateToGoal",
-          "Oscillation",
-          "BaseObstacle",
-          "GoalAlign",
-          "PathAlign",
-          "PathDist",
-          "GoalDist",
-        ]
+      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
       BaseObstacle.scale: 0.02
-      PathAlign.scale: 32.0
+      PathAlign.scale: 32.0  # Desactivar combinación de movimientos
+      GoalAlign.scale: 22.0  # Desactivar combinación de movimientos
       PathAlign.forward_point_distance: 0.1
-      GoalAlign.scale: 24.0
       GoalAlign.forward_point_distance: 0.1
       PathDist.scale: 32.0
       GoalDist.scale: 24.0
-      RotateToGoal.scale: 32.0
-      RotateToGoal.slowing_factor: 5.0
+      RotateToGoal.scale: 32.0  # Aumentar peso para priorizar rotación
+      RotateToGoal.slowing_factor: 5.0  # Obligar al robot a rotar sin avanzar
       RotateToGoal.lookahead_time: -1.0
+
 
 controller_server_rclcpp_node:
   ros__parameters:
@@ -172,33 +151,29 @@ controller_server_rclcpp_node:
 local_costmap:
   local_costmap:
     ros__parameters:
-      update_frequency: 1.0
-      publish_frequency: 1.0
+      update_frequency: 5.0
+      publish_frequency: 5.0
       global_frame: odom
       robot_base_frame: base_link
       use_sim_time: True
       rolling_window: true
       width: 1
       height: 1
-      resolution: 0.0005
+      resolution: 0.005
       footprint: "[[0.105, 0.105], [0.105, -0.105], [-0.105, -0.105], [-0.105, 0.105]]"
-      plugins: ["static_layer", "inflation_layer","range_sensor_layer"]
+      plugins: ["static_layer", "inflation_layer"]
     
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 10.0
-        inflation_radius: 0.3
+        cost_scaling_factor: 7.0
+        inflation_radius: 0.9
     
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True
       always_send_full_costmap: True
   
-      range_sensor_layer:
-        plugin: "nav2_costmap_2d::RangeSensorLayer"
-        transform_tolerance: 0.3
-        clear_on_max_reading: true
-        topics: ["/ultrasound/front", "/ultrasound/left", "/ultrasound/right"]
+ 
   
 
 
@@ -206,15 +181,15 @@ local_costmap:
 global_costmap:
   global_costmap:
     ros__parameters:
-      update_frequency: 1.0
-      publish_frequency: 1.0
+      update_frequency: 5.0
+      publish_frequency: 5.0
       global_frame: map
       robot_base_frame: base_link
       use_sim_time: True
       robot_radius: 0.2
-      resolution: 0.0005
+      resolution: 0.005
       track_unknown_space: true
-      plugins: ["static_layer", "inflation_layer","range_sensor_layer"]
+      plugins: ["static_layer", "inflation_layer"]
      
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
@@ -222,12 +197,8 @@ global_costmap:
      
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 1.0
-        inflation_radius: 0.3
-        
-      range_sensor_layer:
-        plugin: "nav2_costmap_2d::RangeSensorLayer"
-        topics: ["/ultrasound/front", "/ultrasound/left", "/ultrasound/right"]
+        cost_scaling_factor: 5.0
+        inflation_radius: 0.9
 
       always_send_full_costmap: True
 
@@ -246,16 +217,32 @@ map_saver:
 
 planner_server:
   ros__parameters:
-    expected_planner_frequency: 10.0
-    use_sim_time: True
-    planner_plugins: ["GridBased"]
+    expected_planner_frequency: 20.0  # Frecuencia esperada de planificación en Hz
+    planner_plugins: ["GridBased"]   # Lista de plugins de planificación
     GridBased:
-      plugin: "nav2_navfn_planner/NavfnPlanner"
-      tolerance: 0.5
-      use_astar: false
-      allow_unknown: true
-      use_final_approach_orientation: true
+      plugin: "nav2_smac_planner/SmacPlanner2D"  # Tipo de plugin
 
+      # Parámetros generales del SmacPlanner2D
+      tolerance: 0.1                      # Tolerancia al alcanzar el objetivo (en metros)
+      downsample_costmap: false           # Habilitar si deseas reducir la resolución del costmap
+      downsampling_factor: 1              # Factor de reducción, solo si `downsample_costmap` es true
+      allow_unknown: true                 # Permitir planificación en celdas desconocidas
+      max_iterations: -1                  # Número máximo de iteraciones (-1 para ilimitadas)
+      max_planning_time: 2.0              # Tiempo máximo permitido para planificar (en segundos)
+      lookup_table_size: 20.0             # Tamaño de la tabla de búsqueda para heurísticas (en metros)
+
+      # Parámetros de costo y heurística
+      cost_penalty: 2.0                   # Penalización para áreas de alto costo
+      analytic_expansion_ratio: 4.0      # Ratio de expansión para solución analítica
+      minimum_turning_radius: 0.6         # Radio mínimo de giro del robot (en metros)
+
+      # Parámetros relacionados con grids y heurísticas
+      search_info:
+        minimum_turning_radius: 0.6       # Radio mínimo de giro en la búsqueda heurística
+        reverse_penalty: 2.0              # Penalización por movimiento en reversa
+        change_penalty: 0.1              # Penalización por cambio de dirección
+
+    use_sim_time: true  # Configurar en true si estás usando simulación
 
 
 planner_server_rclcpp_node:
@@ -279,8 +266,8 @@ recoveries_server:
     transform_timeout: 0.1
     use_sim_time: true
     simulate_ahead_time: 2.0
-    max_rotational_vel: 1.5
-    min_rotational_vel: 0.4
+    max_rotational_vel: 0.6
+    min_rotational_vel: 0.1
     rotational_acc_lim: 3.2
 
 robot_state_publisher:

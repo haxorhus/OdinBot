@@ -1,0 +1,150 @@
+[1.144s] Invoking command in '/home/jose/microros_ws/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble /usr/bin/cmake --build /home/jose/microros_ws/build/micro_ros_msgs -- -j16 -l16
+[5.114s] [  2%] Built target micro_ros_msgs__cpp
+[5.117s] [ 12%] Built target micro_ros_msgs__rosidl_generator_c
+[5.120s] [ 12%] Built target ament_cmake_python_symlink_micro_ros_msgs
+[5.217s] [ 34%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c
+[5.217s] [ 34%] Built target micro_ros_msgs__rosidl_typesupport_c
+[5.220s] [ 44%] Built target micro_ros_msgs__rosidl_typesupport_cpp
+[5.221s] [ 65%] Built target micro_ros_msgs__rosidl_typesupport_introspection_cpp
+[5.221s] [ 65%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c
+[5.222s] [ 76%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_cpp
+[5.345s] running egg_info
+[5.345s] writing micro_ros_msgs.egg-info/PKG-INFO
+[5.389s] writing dependency_links to micro_ros_msgs.egg-info/dependency_links.txt
+[5.389s] writing top-level names to micro_ros_msgs.egg-info/top_level.txt
+[5.579s] reading manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'
+[5.603s] writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'
+[5.639s] [ 76%] Built target micro_ros_msgs
+[5.692s] [ 76%] Built target ament_cmake_python_build_micro_ros_msgs_egg
+[5.971s] [ 78%] Built target micro_ros_msgs__py
+[6.487s] [ 87%] Built target micro_ros_msgs__rosidl_generator_py
+[6.840s] [100%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext
+[6.840s] [100%] Built target micro_ros_msgs__rosidl_typesupport_c__pyext
+[6.840s] [100%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c__pyext
+[6.853s] Invoked command in '/home/jose/microros_ws/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble /usr/bin/cmake --build /home/jose/microros_ws/build/micro_ros_msgs -- -j16 -l16
+[6.975s] Invoking command in '/home/jose/microros_ws/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble /usr/bin/cmake --install /home/jose/microros_ws/build/micro_ros_msgs
+[7.172s] -- Install configuration: ""
+[7.220s] -- Execute custom install script
+[7.221s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/rosidl_interfaces/micro_ros_msgs
+[7.221s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.h
+[7.221s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.h
+[7.221s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_generator_c__visibility_control.h
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.sh
+[7.222s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.dsv
+[7.223s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_c.h
+[7.223s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_c.h
+[7.223s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_c.h
+[7.223s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.223s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_c.h
+[7.224s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_c.h
+[7.224s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_c.h
+[7.224s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.224s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__builder.hpp
+[7.224s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.hpp
+[7.224s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__traits.hpp
+[7.224s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__builder.hpp
+[7.224s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.hpp
+[7.224s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__traits.hpp
+[7.225s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__builder.hpp
+[7.225s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.hpp
+[7.225s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__traits.hpp
+[7.225s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.hpp
+[7.225s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.hpp
+[7.225s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.hpp
+[7.225s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_cpp.hpp
+[7.225s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_cpp.hpp
+[7.226s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_cpp.hpp
+[7.226s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.226s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_cpp.hpp
+[7.226s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_cpp.hpp
+[7.226s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_cpp.hpp
+[7.226s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.sh
+[7.226s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.dsv
+[7.227s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/PKG-INFO
+[7.227s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/SOURCES.txt
+[7.227s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/dependency_links.txt
+[7.227s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/top_level.txt
+[7.227s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py
+[7.227s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c
+[7.227s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity_s.c
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph_s.c
+[7.228s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py
+[7.229s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node_s.c
+[7.248s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.272s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.487s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.487s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.idl
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.idl
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.idl
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.msg
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.msg
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.msg
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/package_run_dependencies/micro_ros_msgs
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/parent_prefix_path/micro_ros_msgs
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.sh
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.dsv
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.sh
+[7.488s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.dsv
+[7.489s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.bash
+[7.489s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.sh
+[7.489s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.zsh
+[7.489s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.dsv
+[7.489s] -- Symlinking: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv
+[7.498s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/packages/micro_ros_msgs
+[7.498s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake-extras.cmake
+[7.498s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.498s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[7.498s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[7.499s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.499s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.499s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.499s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig.cmake
+[7.500s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig-version.cmake
+[7.500s] -- Up-to-date symlink: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.xml
+[7.560s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so
+[7.610s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so
+[7.675s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so
+[7.705s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so
+[7.705s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so
+[7.760s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so
+[7.761s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so
+[8.344s] Listing '/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs'...
+[8.345s] Listing '/home/jose/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg'...
+[8.394s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so
+[8.431s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport.cmake
+[8.431s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport-noconfig.cmake
+[8.467s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[8.468s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[8.492s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport.cmake
+[8.492s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[8.529s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport.cmake
+[8.530s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[8.554s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cppExport.cmake
+[8.579s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[8.579s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[8.616s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[8.617s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[8.654s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport.cmake
+[8.654s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[8.678s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport.cmake
+[8.678s] -- Up-to-date: /home/jose/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport-noconfig.cmake
+[8.935s] Invoked command in '/home/jose/microros_ws/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jose/turtlebot3_ws/install/turtlebot3_teleop:/home/jose/turtlebot3_ws/install/turtlebot3_example:/home/jose/turtlebot3_ws/install/tb3_sim:/home/jose/microros_ws/install/odin_nav:/opt/ros/humble /usr/bin/cmake --install /home/jose/microros_ws/build/micro_ros_msgs

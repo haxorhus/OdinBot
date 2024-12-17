@@ -31,7 +31,7 @@ class VideoCapture:
         return self.q.get()
 
 # --- Configuración de video ---
-video_url = "http://192.168.105.151:8080/video"  # URL de la cámara IP
+video_url = "http://172.16.235.51:8080/video"  # URL de la cámara IP
 cap = VideoCapture(video_url)
 
 # --- Longitud real del lado del área de trabajo (en metros) ---
@@ -60,7 +60,7 @@ def find_corners(points):
 while True:
     # Leer el fotograma actual
     frame = cap.read()
-    frame = frame[0:720, 120:1100]
+    #frame = frame[0:720, 120:1100]
 
     # Convertir a escala de grises y suavizar
     gray_img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)

@@ -1,111 +1,113 @@
 import cv2
 import numpy as np
+import queue
+import threading
+import time
 
-# Cargar la imagen
-image = cv2.imread('/home/jose/microros_ws/src/img/img.png')
+# --- Clase para captura de video sin buffer ---
+class VideoCapture:
+    def __init__(self, name):
+        self.cap = cv2.VideoCapture(name)
+        self.q = queue.Queue()
+        t = threading.Thread(target=self._reader)
+        t.daemon = True
+        t.start()
 
-# Convertir la imagen a escala de grises
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    def _reader(self):
+        while True:
+            ret, frame = self.cap.read()
+            if not ret:
+                break
+            if not self.q.empty():
+                try:
+                    self.q.get_nowait()  # Descarta el fotograma anterior
+                except queue.Empty:
+                    pass
+            self.q.put(frame)
 
-# Aplicar detección de bordes
-edges = cv2.Canny(gray, 50, 150)
+    def read(self):
+        return self.q.get()
 
-# Encontrar contornos
-contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+# --- Configuración de video ---
+video_url = "http://172.16.234.78:8080/video"  # URL de la cámara IP
+cap = VideoCapture(video_url)
 
-# Filtrar contornos para encontrar el cuadrado más grande
-largest_contour = max(contours, key=cv2.contourArea)
+# Variables para almacenar las esquinas seleccionadas
+corners = []
+selecting = True
 
-# Obtener el rectángulo delimitador del cuadrado
-x, y, w, h = cv2.boundingRect(largest_contour)
+def select_corners(event, x, y, flags, param):
+    global corners, selecting
+    if event == cv2.EVENT_LBUTTONDOWN:
+        corners.append((x, y))
+        print(f"Esquina seleccionada: {x, y}")
+        if len(corners) == 4:
+            selecting = False
 
-# Recortar la imagen
-cropped_image = image[y:y+h, x:x+w]
+# Crear ventana para selección de esquinas
+cv2.namedWindow("Seleccionar esquinas")
+cv2.setMouseCallback("Seleccionar esquinas", select_corners)
 
-# Convertir la imagen recortada al espacio HSV
-hsv = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2HSV)
+print("Selecciona las cuatro esquinas del área de trabajo en el video.")
 
-# --- DETECCIÓN DE OBJETOS ROJOS ---
-# Rango de color rojo en HSV
-lower_red = np.array([0, 120, 70])
-upper_red = np.array([10, 255, 255])
-mask_red1 = cv2.inRange(hsv, lower_red, upper_red)
+# Esperar hasta que se seleccionen las esquinas
+while selecting:
+    frame = cap.read()
+    for corner in corners:
+        cv2.circle(frame, corner, 5, (0, 0, 255), -1)
+    cv2.imshow("Seleccionar esquinas", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        print("Selección cancelada.")
+        selecting = False
 
-lower_red2 = np.array([170, 120, 70])
-upper_red2 = np.array([180, 255, 255])
-mask_red2 = cv2.inRange(hsv, lower_red2, upper_red2)
+cv2.destroyWindow("Seleccionar esquinas")
 
-# Unir las dos máscaras
-mask_red = mask_red1 + mask_red2
+if len(corners) == 4:
+    print("Esquinas seleccionadas:", corners)
 
-# Crear imagen binaria (rojo como negro, fondo blanco)
-binary_red = cv2.bitwise_not(mask_red)  # Invertir para fondo blanco
-cv2.imshow("Objetos Rojos en Blanco y Negro", binary_red)
-cv2.imwrite("../img/map.png",binary_red)
+    # Ordenar esquinas seleccionadas en el orden: top-left, top-right, bottom-left, bottom-right
+    corners = np.array(corners, dtype="float32")
+    s = corners.sum(axis=1)
+    diff = np.diff(corners, axis=1)
+    top_left = corners[np.argmin(s)]
+    bottom_right = corners[np.argmax(s)]
+    top_right = corners[np.argmin(diff)]
+    bottom_left = corners[np.argmax(diff)]
+    sorted_corners = np.array([top_left, top_right, bottom_left, bottom_right], dtype="float32")
 
-# --- DETECCIÓN DEL OBJETO VERDE ---
-# Rango de color verde en HSV
-lower_green = np.array([40, 40, 40])
-upper_green = np.array([80, 255, 255])
-mask_green = cv2.inRange(hsv, lower_green, upper_green)
+    # Configurar la dimensión de la salida con resolución de 0.005 m/píxel y dimensiones reales de 3x2.4 m
+    resolution = 0.005  # metros/píxel
+    real_width = 3.0  # metros
+    real_height = 2.4  # metros
 
-# Encontrar contornos para el objeto verde
-contours_green, _ = cv2.findContours(mask_green, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    output_width = int(real_width / resolution)  # píxeles
+    output_height = int(real_height / resolution)  # píxeles
 
-# --- DETECCIÓN DEL CÍRCULO (ROBOT) ---
-gray_cropped = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2GRAY)
-gray_cropped = cv2.medianBlur(gray_cropped, 5)  # Reducir ruido
+    destination_points = np.array([
+        [0, 0],
+        [output_width - 1, 0],
+        [0, output_height - 1],
+        [output_width - 1, output_height - 1]
+    ], dtype="float32")
 
-# Detección de círculos
-circles = cv2.HoughCircles(
-    gray_cropped, 
-    cv2.HOUGH_GRADIENT, 
-    dp=1.2, 
-    minDist=30, 
-    param1=150, 
-    param2=40, 
-    minRadius=10, 
-    maxRadius=30
-)
+    # Calcular la matriz de transformación
+    matrix = cv2.getPerspectiveTransform(sorted_corners, destination_points)
 
-# Dimensiones reales del área en metros
-real_width = 2.7  # metros
-real_height = 2.7  # metros
+    while True:
+        frame = cap.read()
+        cropped_img = cv2.warpPerspective(frame, matrix, (output_width, output_height))
 
-# Dimensiones de la imagen en píxeles
-image_height, image_width = cropped_image.shape[:2]
+        # Mostrar la imagen recortada
+        cv2.imshow("Área de Trabajo Recortada", cropped_img)
 
-# Escala metros por píxel
-scale_x = real_width / image_width
-scale_y = real_height / image_height
+        # Manejar eventos de teclado
+        key = cv2.waitKey(1) & 0xFF
+        if key == ord('q'):
+            break
+        elif key == ord('s'):
+            save_path = "/home/jose/microros_ws/src/img/cropped_image.png"
+            cv2.imwrite(save_path, cropped_img)
+            print(f"Imagen guardada en {save_path}")
 
-# Coordenadas del objeto verde
-if contours_green:
-    largest_green = max(contours_green, key=cv2.contourArea)
-    M_green = cv2.moments(largest_green)
-    if M_green["m00"] != 0:
-        cx_green_pixel = int(M_green["m10"] / M_green["m00"])
-        cy_green_pixel = int(M_green["m01"] / M_green["m00"])
-        
-        # Convertir a coordenadas reales (metros)
-        cx_green_real = scale_x * (image_width - cx_green_pixel)
-        cy_green_real = scale_y * cy_green_pixel
-        
-        print(f"Centroide del objeto verde (en metros): ({cx_green_real:.2f}, {cy_green_real:.2f})")
-
-# Coordenadas del círculo (robot)
-if circles is not None:
-    for circle in circles[0, :]:
-        cx_circle_pixel, cy_circle_pixel, radius = circle
-        
-        # Convertir a coordenadas reales (metros)
-        cx_circle_real = scale_x * (image_width - cx_circle_pixel)
-        cy_circle_real = scale_y * cy_circle_pixel
-        
-        print(f"Centroide del círculo (robot) en metros: ({cx_circle_real:.2f}, {cy_circle_real:.2f})")
-
-
-# Mostrar resultados
-cv2.imshow('Cropped Image', cropped_image)
-cv2.waitKey(0)
 cv2.destroyAllWindows()
+cap.cap.release()

@@ -12,6 +12,7 @@ config/ekf.yaml
 config/nav2_params.yaml
 launch/display.launch.py
 odin_nav/__init__.py
+odin_nav/box_pub.py
 odin_nav/convert_to_map.py
 odin_nav/goal_pub.py
 odin_nav/map_pub.py
